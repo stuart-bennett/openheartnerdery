@@ -662,3 +662,205 @@ pre {
 }
 
 /* Literal.Number.Integer.Long */
+@-moz-keyframes test23 {
+  /* line 3, G:/code/openheartnerdery/src/sass/shared/modules/_built-using.scss */
+  0% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transform: translate(0, 100px);
+    -moz-transform: translate(0, 100px);
+    -ms-transform: translate(0, 100px);
+    -o-transform: translate(0, 100px);
+    transform: translate(0, 100px);
+  }
+
+  /* line 8, G:/code/openheartnerdery/src/sass/shared/modules/_built-using.scss */
+  100% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+/* line 15, G:/code/openheartnerdery/src/sass/shared/modules/_built-using.scss */
+.built-using img {
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: test23;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-name: test23;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1s;
+  -o-animation-name: test23;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-name: test23;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+}
+
+/* line 7, ../sass/homepage.scss */
+article.homepage section.projects-description:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 11, ../sass/homepage.scss */
+article.homepage h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.4em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+/* line 18, ../sass/homepage.scss */
+article.homepage p {
+  line-height: 1.4em;
+  font-family: 'Antic Slab', serif;
+}
+/* line 23, ../sass/homepage.scss */
+article.homepage header, article.homepage pre.prettyprint, article.homepage p, article.homepage ul {
+  margin-bottom: 1em;
+}
+/* line 27, ../sass/homepage.scss */
+article.homepage section.latest-writing {
+  float: left;
+  width: 65%;
+}
+/* line 32, ../sass/homepage.scss */
+article.homepage section.latest-writing h2 a {
+  color: #333;
+  text-decoration: none;
+}
+/* line 37, ../sass/homepage.scss */
+article.homepage section.projects-description {
+  float: left;
+  width: 35%;
+  margin-bottom: 1em;
+}
+/* line 43, ../sass/homepage.scss */
+article.homepage section.projects-description header {
+  margin-bottom: 0;
+}
+/* line 47, ../sass/homepage.scss */
+article.homepage .projects {
+  float: left;
+  width: 100%;
+  margin: 1em 0 4em 0;
+  padding: 0;
+}
+/* line 54, ../sass/homepage.scss */
+article.homepage .projects li {
+  float: left;
+  width: 45%;
+  margin-right: 2em;
+}
+/* line 60, ../sass/homepage.scss */
+article.homepage .projects li h3 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+/* line 66, ../sass/homepage.scss */
+article.homepage .projects li p {
+  margin: 0;
+  padding: 0;
+}
+/* line 72, ../sass/homepage.scss */
+article.homepage section.projects-description ul li header {
+  margin: 0;
+}
+/* line 76, ../sass/homepage.scss */
+article.homepage section.projects-description ul li header h2 a {
+  text-decoration: none;
+}
+/* line 80, ../sass/homepage.scss */
+article.homepage section.currently-listening-to {
+  float: left;
+  width: 40%;
+}
+/* line 85, ../sass/homepage.scss */
+article.homepage section.currently-listening-to ul li {
+  float: left;
+  margin-right: 1.4em;
+}
+/* line 90, ../sass/homepage.scss */
+article.homepage section.currently-listening-to ul li:nth-child(3) {
+  margin-right: 0;
+}
+/* line 94, ../sass/homepage.scss */
+article.homepage section.currently-listening-to img {
+  width: 100px;
+  height: 100px;
+}
+/* line 99, ../sass/homepage.scss */
+article.homepage section.flickr {
+  float: left;
+  width: 60%;
+}
+/* line 104, ../sass/homepage.scss */
+article.homepage section.flickr ul li {
+  float: left;
+  margin-right: 1.4em;
+}
+/* line 109, ../sass/homepage.scss */
+article.homepage section.flickr ul li:last-child {
+  margin-right: 0;
+}
+/* line 113, ../sass/homepage.scss */
+article.homepage section.flickr img {
+  width: 260px;
+  height: 210px;
+}
+/* line 118, ../sass/homepage.scss */
+article.homepage header {
+  margin-bottom: 1em;
+}
+/* line 122, ../sass/homepage.scss */
+article.homepage header h1 {
+  text-align: left;
+  color: #CCC;
+  text-shadow: 0px 1px 0px #ffffff;
+  font-size: 3.5em;
+  text-transform: uppercase;
+}
+/* line 130, ../sass/homepage.scss */
+article.homepage header h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.3em;
+}
+/* line 135, ../sass/homepage.scss */
+article.homepage header span, article.homepage header ul {
+  float: left;
+  color: #999;
+}
+/* line 140, ../sass/homepage.scss */
+article.homepage header ul.tag-classification {
+  margin: 0 0 0 1em;
+  padding: 0;
+}
+/* line 145, ../sass/homepage.scss */
+article.homepage header ul.tag-classification li {
+  float: left;
+  margin-right: 0.2em;
+}
+/* line 150, ../sass/homepage.scss */
+article.homepage header ul.tag-classification li:after {
+  content: ', ';
+}
+/* line 154, ../sass/homepage.scss */
+article.homepage header ul.tag-classification li:last-child:after {
+  content: '';
+}

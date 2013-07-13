@@ -1,0 +1,157 @@
+@import "base";
+@import "shared/modules/_built-using";
+
+article.homepage {
+
+  section.projects-description:after
+  {
+    @include clearFix();
+  }
+
+  h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.4em;
+    text-transform: uppercase;
+    font-weight: normal;  
+  }
+
+  p {
+    line-height: 1.4em;
+    font-family: 'Antic Slab', serif;
+  }
+
+  header, pre.prettyprint, p, ul {
+    margin-bottom: 1em;
+  }
+
+  section.latest-writing {
+    float: left;
+    width: 65%;
+  }
+
+  section.latest-writing h2 a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  section.projects-description {
+    float: left;
+    width: 35%;
+    margin-bottom: 1em;
+  }
+
+  section.projects-description header {
+    margin-bottom: 0;
+  }
+
+  .projects {
+    float: left;
+    width: 100%;
+    margin: 1em 0 4em 0;
+    padding: 0;
+  }
+
+  .projects li {
+    float: left;
+    width: 45%;
+    margin-right: 2em;
+  }
+
+  .projects li h3 {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  .projects li p {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  section.projects-description ul li header {
+    margin: 0;
+  }
+
+  section.projects-description ul li header h2 a {
+    text-decoration: none;
+  }
+
+  section.currently-listening-to {
+    float: left;
+    width: 40%;
+  }
+
+  section.currently-listening-to ul li {
+    float: left;
+    margin-right: 1.4em;
+  }
+
+  section.currently-listening-to ul li:nth-child(3) {
+    margin-right: 0;
+  }
+
+  section.currently-listening-to img {
+    width: 100px;
+    height: 100px;
+  }
+
+  section.flickr {
+    float: left;
+    width: 60%;
+  }
+
+  section.flickr ul li {
+    float: left;
+    margin-right: 1.4em;
+  }
+
+  section.flickr ul li:last-child {
+    margin-right: 0;
+  }
+
+  section.flickr img {
+    width: 260px;
+    height: 210px;
+  }
+
+  header {
+    margin-bottom: 1em;
+  }
+
+  header h1 {
+    text-align: left;
+    color: #CCC;
+    text-shadow: 0px 1px 0px #ffffff;
+    font-size: 3.5em;
+    text-transform: uppercase;
+  }
+
+  header h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+  }
+
+  header span, header ul {
+    float: left;
+    color: #999;
+  }
+
+  header ul.tag-classification {
+    margin: 0 0 0 1em;
+    padding: 0;
+  }
+
+  header ul.tag-classification li {
+    float: left;
+    margin-right: 0.2em;
+  }
+
+  header ul.tag-classification li:after {
+    content: ', ';
+  }
+
+  header ul.tag-classification li:last-child:after {
+    content: '';
+  }
+}
