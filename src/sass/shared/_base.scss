@@ -1,0 +1,107 @@
+body {
+  font-family: $primaryFontFamily;
+  font-size: 100%;
+  background: #EEE;
+}
+
+a {
+  color: #2B90D7;
+}
+
+a:hover {
+  color: #2BC5D7;
+}
+
+h1 a, h2 a, h3 a {
+  text-decoration: none;
+}
+
+p { @include contentBlock(); }
+
+div.wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+div.page-content {
+  line-height: $baseLineHeight;
+}
+
+header.homepage {
+  background: url(../assets/backgrounds/wall.JPG) no-repeat;
+  background-position: center;
+}
+
+header.about {
+  background: url(../assets/backgrounds/light.JPG) no-repeat;
+  background-position: center;
+}
+
+header.site-header {
+  padding: 1em 0 3em 0;
+  margin-bottom: 2em;
+  background-color: #EDEDED;
+  background-size: 100%;
+}
+
+header.site-header h1, header.site-header p, header.site-header nav {
+  margin: 0.4em 0;
+  padding: 0.4em;
+  background: #FFF;
+}
+
+header.site-header h1 {
+  font-family: arial;
+  text-transform: uppercase;
+  letter-spacing: -0.07em;
+  font-weight: 700;
+  font-size: pixels-to-ems(35);
+  float: left;
+  clear: both;
+  padding: 0.4em;
+}
+
+header.site-header h1 a {
+  color: black;
+  text-decoration: none;
+}
+
+header.site-header nav {
+  text-transform: lowercase;
+  position: absolute;
+  top: 0.4em;
+  right: 0;
+  opacity: 0.4;
+}
+
+.site-header nav ul li {
+  float: left;
+  font-size: 1.7em;
+  padding: 0.2em 0.5em;
+}
+
+.site-header nav ul li a {
+  float: left;
+  text-decoration: none;
+  color: black;
+}
+
+header.site-header nav ul li a:hover {
+  border-bottom: solid #999 3px;
+}
+
+header.site-header nav ul li.active a {
+  border-bottom: solid #000 3px;
+}
+
+header.site-header p {
+  font-family: 'Crete Round';
+  float: left;
+  clear: both;
+  font-size: 1.7em;
+  line-height: 1.4em;
+}
+
+header.site-header:after { @include clearFix(); }
+article { clear: both; }

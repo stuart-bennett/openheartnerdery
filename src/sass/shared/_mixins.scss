@@ -1,0 +1,15 @@
+@function pixels-to-ems($px, $baseline: 16) {
+	@return ($px/$baseline) + 0em;
+}
+
+@mixin contentBlock() {
+	margin-bottom: $contentBlockPaddingBottom;
+}
+
+@mixin clearFix() {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

@@ -1,0 +1,15 @@
+// Layout
+$contentBlockPaddingBottom: 1em;
+
+// Type
+$baseline			: 16;
+$baseLineHeight  	: pixels-to-ems(24, $baseline);
+$primaryFontFamily  : 'Antic Slab', serif;
+$secondaryFontFamily: 'Sanchez', serif;
+$monoSpaceFontFamily: monospace;
+$primaryColor 		: #000;
+$primaryColorLighter: #999;
+
+// Code
+$codeBackgroundColor: #333;
+$codeTextColor: #FFF;

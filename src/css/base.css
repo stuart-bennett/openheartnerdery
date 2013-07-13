@@ -1,0 +1,664 @@
+/* line 17, G:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, G:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, G:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, G:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, G:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, G:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, G:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, G:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, G:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, G:/code/mysite/src/sass/shared/_base.scss */
+body {
+  font-family: "Antic Slab", serif;
+  font-size: 100%;
+  background: #EEE;
+}
+
+/* line 7, G:/code/mysite/src/sass/shared/_base.scss */
+a {
+  color: #2B90D7;
+}
+
+/* line 11, G:/code/mysite/src/sass/shared/_base.scss */
+a:hover {
+  color: #2BC5D7;
+}
+
+/* line 15, G:/code/mysite/src/sass/shared/_base.scss */
+h1 a, h2 a, h3 a {
+  text-decoration: none;
+}
+
+/* line 19, G:/code/mysite/src/sass/shared/_base.scss */
+p {
+  margin-bottom: 1em;
+}
+
+/* line 21, G:/code/mysite/src/sass/shared/_base.scss */
+div.wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+/* line 27, G:/code/mysite/src/sass/shared/_base.scss */
+div.page-content {
+  line-height: 1.5em;
+}
+
+/* line 31, G:/code/mysite/src/sass/shared/_base.scss */
+header.homepage {
+  background: url(../assets/backgrounds/wall.JPG) no-repeat;
+  background-position: center;
+}
+
+/* line 36, G:/code/mysite/src/sass/shared/_base.scss */
+header.about {
+  background: url(../assets/backgrounds/light.JPG) no-repeat;
+  background-position: center;
+}
+
+/* line 41, G:/code/mysite/src/sass/shared/_base.scss */
+header.site-header {
+  padding: 1em 0 3em 0;
+  margin-bottom: 2em;
+  background-color: #EDEDED;
+  background-size: 100%;
+}
+
+/* line 48, G:/code/mysite/src/sass/shared/_base.scss */
+header.site-header h1, header.site-header p, header.site-header nav {
+  margin: 0.4em 0;
+  padding: 0.4em;
+  background: #FFF;
+}
+
+/* line 54, G:/code/mysite/src/sass/shared/_base.scss */
+header.site-header h1 {
+  font-family: arial;
+  text-transform: uppercase;
+  letter-spacing: -0.07em;
+  font-weight: 700;
+  font-size: 2.1875em;
+  float: left;
+  clear: both;
+  padding: 0.4em;
+}
+
+/* line 65, G:/code/mysite/src/sass/shared/_base.scss */
+header.site-header h1 a {
+  color: black;
+  text-decoration: none;
+}
+
+/* line 70, G:/code/mysite/src/sass/shared/_base.scss */
+header.site-header nav {
+  text-transform: lowercase;
+  position: absolute;
+  top: 0.4em;
+  right: 0;
+  opacity: 0.4;
+}
+
+/* line 78, G:/code/mysite/src/sass/shared/_base.scss */
+.site-header nav ul li {
+  float: left;
+  font-size: 1.7em;
+  padding: 0.2em 0.5em;
+}
+
+/* line 84, G:/code/mysite/src/sass/shared/_base.scss */
+.site-header nav ul li a {
+  float: left;
+  text-decoration: none;
+  color: black;
+}
+
+/* line 90, G:/code/mysite/src/sass/shared/_base.scss */
+header.site-header nav ul li a:hover {
+  border-bottom: solid #999 3px;
+}
+
+/* line 94, G:/code/mysite/src/sass/shared/_base.scss */
+header.site-header nav ul li.active a {
+  border-bottom: solid #000 3px;
+}
+
+/* line 98, G:/code/mysite/src/sass/shared/_base.scss */
+header.site-header p {
+  font-family: 'Crete Round';
+  float: left;
+  clear: both;
+  font-size: 1.7em;
+  line-height: 1.4em;
+}
+
+/* line 106, G:/code/mysite/src/sass/shared/_base.scss */
+header.site-header:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 107, G:/code/mysite/src/sass/shared/_base.scss */
+article {
+  clear: both;
+}
+
+/* line 2, G:/code/mysite/src/sass/shared/modules/_page-header.scss */
+.page-header h2 {
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  padding: 0.4em 0;
+  border-bottom: solid #CCC 1px;
+}
+/* line 12, G:/code/mysite/src/sass/shared/modules/_page-header.scss */
+.page-header h3 {
+  color: #999999;
+  text-align: center;
+  font-size: 1.5625em;
+}
+
+/* line 1, G:/code/mysite/src/sass/shared/modules/_code.scss */
+pre {
+  margin-bottom: 1em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  text-shadow: black 1px 1px 0;
+  font-family: monospace;
+  background-color: #333333;
+  color: white;
+  padding: 1em;
+}
+
+/* line 11, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight {
+  background: #303030;
+  color: #e5e5e5;
+}
+
+/* line 12, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .hll {
+  background-color: #ffffcc;
+}
+
+/* line 13, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .c {
+  color: #647bcf;
+}
+
+/* Comment */
+/* line 14, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .err {
+  color: #e5e5e5;
+}
+
+/* Error */
+/* line 15, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .g {
+  color: #e5e5e5;
+}
+
+/* Generic */
+/* line 16, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .k {
+  color: #c0c090;
+}
+
+/* Keyword */
+/* line 17, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .l {
+  color: #e5e5e5;
+}
+
+/* Literal */
+/* line 18, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .n {
+  color: #e5e5e5;
+}
+
+/* Name */
+/* line 19, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .o {
+  color: #e5e5e5;
+}
+
+/* Operator */
+/* line 20, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .x {
+  color: #e5e5e5;
+}
+
+/* Other */
+/* line 21, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .p {
+  color: #e5e5e5;
+}
+
+/* Punctuation */
+/* line 22, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .cm {
+  color: #647bcf;
+}
+
+/* Comment.Multiline */
+/* line 23, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .cp {
+  color: #c090c0;
+}
+
+/* Comment.Preproc */
+/* line 24, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .c1 {
+  color: #647bcf;
+}
+
+/* Comment.Single */
+/* line 25, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .cs {
+  color: #647bcf;
+}
+
+/* Comment.Special */
+/* line 26, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .gd {
+  color: #a0d0ff;
+  background-color: #0020a0;
+}
+
+/* Generic.Deleted */
+/* line 27, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .ge {
+  color: #707070;
+  text-decoration: underline;
+}
+
+/* Generic.Emph */
+/* line 28, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .gr {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #8000ff;
+}
+
+/* Generic.Error */
+/* line 29, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .gh {
+  color: #008b8b;
+}
+
+/* Generic.Heading */
+/* line 30, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .gi {
+  color: #a0d0ff;
+  background-color: #0020a0;
+}
+
+/* Generic.Inserted */
+/* line 31, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .go {
+  color: #707070;
+  font-weight: bold;
+  background-color: #383838;
+}
+
+/* Generic.Output */
+/* line 32, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .gp {
+  color: #e5e5e5;
+}
+
+/* Generic.Prompt */
+/* line 33, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .gs {
+  color: #e5e5e5;
+}
+
+/* Generic.Strong */
+/* line 34, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .gu {
+  color: #008b8b;
+}
+
+/* Generic.Subheading */
+/* line 35, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .gt {
+  color: #ffa0ff;
+  font-weight: bold;
+}
+
+/* Generic.Traceback */
+/* line 36, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .kc {
+  color: #c0c090;
+}
+
+/* Keyword.Constant */
+/* line 37, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .kd {
+  color: #c0c090;
+}
+
+/* Keyword.Declaration */
+/* line 38, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .kn {
+  color: #c0c090;
+}
+
+/* Keyword.Namespace */
+/* line 39, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .kp {
+  color: #c0c090;
+}
+
+/* Keyword.Pseudo */
+/* line 40, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .kr {
+  color: #c0c090;
+}
+
+/* Keyword.Reserved */
+/* line 41, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .kt {
+  color: #60f0a8;
+}
+
+/* Keyword.Type */
+/* line 42, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .ld {
+  color: #e5e5e5;
+}
+
+/* Literal.Date */
+/* line 43, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .m {
+  color: #e5e5e5;
+}
+
+/* Literal.Number */
+/* line 44, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .s {
+  color: #e5e5e5;
+}
+
+/* Literal.String */
+/* line 45, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .na {
+  color: #e5e5e5;
+}
+
+/* Name.Attribute */
+/* line 46, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .nb {
+  color: #e5e5e5;
+}
+
+/* Name.Builtin */
+/* line 47, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .nc {
+  color: #e5e5e5;
+}
+
+/* Name.Class */
+/* line 48, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .no {
+  color: #b07050;
+}
+
+/* Name.Constant */
+/* line 49, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .nd {
+  color: #e5e5e5;
+}
+
+/* Name.Decorator */
+/* line 50, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .ni {
+  color: #c090c0;
+}
+
+/* Name.Entity */
+/* line 51, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .ne {
+  color: #e5e5e5;
+}
+
+/* Name.Exception */
+/* line 52, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .nf {
+  color: #e5e5e5;
+}
+
+/* Name.Function */
+/* line 53, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .nl {
+  color: #e5e5e5;
+}
+
+/* Name.Label */
+/* line 54, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .nn {
+  color: #e5e5e5;
+}
+
+/* Name.Namespace */
+/* line 55, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .nx {
+  color: #e5e5e5;
+}
+
+/* Name.Other */
+/* line 56, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .py {
+  color: #e5e5e5;
+}
+
+/* Name.Property */
+/* line 57, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .nt {
+  color: #c0c090;
+}
+
+/* Name.Tag */
+/* line 58, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .nv {
+  color: #90c0c0;
+}
+
+/* Name.Variable */
+/* line 59, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .ow {
+  color: #e5e5e5;
+}
+
+/* Operator.Word */
+/* line 60, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .w {
+  color: #e5e5e5;
+}
+
+/* Text.Whitespace */
+/* line 61, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .mf {
+  color: #e5e5e5;
+}
+
+/* Literal.Number.Float */
+/* line 62, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .mh {
+  color: #e5e5e5;
+}
+
+/* Literal.Number.Hex */
+/* line 63, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .mi {
+  color: #e5e5e5;
+}
+
+/* Literal.Number.Integer */
+/* line 64, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .mo {
+  color: #e5e5e5;
+}
+
+/* Literal.Number.Oct */
+/* line 65, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .sb {
+  color: #e5e5e5;
+}
+
+/* Literal.String.Backtick */
+/* line 66, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .sc {
+  color: #e5e5e5;
+}
+
+/* Literal.String.Char */
+/* line 67, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .sd {
+  color: #e5e5e5;
+}
+
+/* Literal.String.Doc */
+/* line 68, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .s2 {
+  color: #e5e5e5;
+}
+
+/* Literal.String.Double */
+/* line 69, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .se {
+  color: #e5e5e5;
+}
+
+/* Literal.String.Escape */
+/* line 70, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .sh {
+  color: #e5e5e5;
+}
+
+/* Literal.String.Heredoc */
+/* line 71, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .si {
+  color: #e5e5e5;
+}
+
+/* Literal.String.Interpol */
+/* line 72, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .sx {
+  color: #e5e5e5;
+}
+
+/* Literal.String.Other */
+/* line 73, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .sr {
+  color: #e5e5e5;
+}
+
+/* Literal.String.Regex */
+/* line 74, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .s1 {
+  color: #e5e5e5;
+}
+
+/* Literal.String.Single */
+/* line 75, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .ss {
+  color: #e5e5e5;
+}
+
+/* Literal.String.Symbol */
+/* line 76, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .bp {
+  color: #e5e5e5;
+}
+
+/* Name.Builtin.Pseudo */
+/* line 77, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .vc {
+  color: #90c0c0;
+}
+
+/* Name.Variable.Class */
+/* line 78, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .vg {
+  color: #90c0c0;
+}
+
+/* Name.Variable.Global */
+/* line 79, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .vi {
+  color: #90c0c0;
+}
+
+/* Name.Variable.Instance */
+/* line 80, G:/code/mysite/src/sass/shared/modules/_code.scss */
+.highlight .il {
+  color: #e5e5e5;
+}
+
+/* Literal.Number.Integer.Long */

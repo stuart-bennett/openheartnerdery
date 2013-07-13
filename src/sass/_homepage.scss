@@ -1,0 +1,163 @@
+section.projects-description:after
+{
+  @include clearFix();
+}
+
+article.homepage h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.4em;
+  text-transform: uppercase;
+  font-weight: normal;  
+}
+
+article.homepage p {
+  line-height: 1.4em;
+  font-family: 'Antic Slab', serif;
+}
+
+article.homepage header, article.homepage pre.prettyprint, article.homepage p, article.homepage ul {
+  margin-bottom: 1em;
+}
+
+article.homepage section.latest-writing {
+  float: left;
+  width: 65%;
+}
+
+article.homepage section.latest-writing h2 a {
+  color: #333;
+  text-decoration: none;
+}
+
+article.homepage section.projects-description {
+  float: left;
+  width: 35%;
+  margin-bottom: 1em;
+}
+
+article.homepage section.projects-description header {
+  margin-bottom: 0;
+}
+
+article.homepage .projects {
+  float: left;
+  width: 100%;
+  margin: 1em 0 4em 0;
+  padding: 0;
+}
+
+article.homepage .projects li {
+  float: left;
+  width: 45%;
+  margin-right: 2em;
+}
+
+article.homepage .projects li h3 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+article.homepage .projects li p {
+  margin: 0;
+  padding: 0;
+}
+
+
+article.homepage section.projects-description ul li header {
+  margin: 0;
+}
+
+article.homepage section.projects-description ul li header h2 a {
+  text-decoration: none;
+}
+
+article.homepage section.currently-listening-to {
+  float: left;
+  width: 40%;
+}
+
+article.homepage section.currently-listening-to ul li {
+  float: left;
+  margin-right: 1.4em;
+}
+
+article.homepage section.currently-listening-to ul li:nth-child(3) {
+  margin-right: 0;
+}
+
+article.homepage section.currently-listening-to img {
+  width: 100px;
+  height: 100px;
+}
+
+article.homepage section.flickr {
+  float: left;
+  width: 60%;
+}
+
+article.homepage section.flickr ul li {
+  float: left;
+  margin-right: 1.4em;
+}
+
+article.homepage section.flickr ul li:last-child {
+  margin-right: 0;
+}
+
+article.homepage section.flickr img {
+  width: 260px;
+  height: 210px;
+}
+
+article.homepage header {
+  margin-bottom: 1em;
+}
+
+article.homepage header h1 {
+  text-align: left;
+  color: #CCC;
+  text-shadow: 0px 1px 0px #ffffff;
+  font-size: 3.5em;
+  text-transform: uppercase;
+}
+
+article.homepage header h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.3em;
+}
+
+article.homepage header span, article.homepage header ul {
+  float: left;
+  color: #999;
+}
+
+article.homepage header ul.tag-classification {
+  margin: 0 0 0 1em;
+  padding: 0;
+}
+
+article.homepage header ul.tag-classification li {
+  float: left;
+  margin-right: 0.2em;
+}
+
+article.homepage header ul.tag-classification li:after {
+  content: ', ';
+}
+
+article.homepage header ul.tag-classification li:last-child:after {
+  content: '';
+}
+
+article.homepage code {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+article.homepage pre.prettyprint {
+  border: none;
+  border-top: solid #CCC 1px;
+  border-bottom: solid #CCC 1px;
+  padding: 1em 0;
+}
