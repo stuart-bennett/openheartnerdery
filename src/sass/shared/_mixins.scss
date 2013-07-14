@@ -15,8 +15,14 @@
 }
 
 @mixin breakpoint($point) {
-  @if $point == hero-gets-to-narrow {
-    @media (max-width: 711px) { @content; }
+  @if $point == hero-gets-too-narrow {
+    @media (max-width: 858px) { @content; }
+  }
+  @if $point == so-narrow-that-header-wraps {
+    @media (max-width: 559px) { @content; }
+  }  
+  @else if $point == wide-hero {
+    @media (min-width: 859px) { @content; }
   }
 }
 
@@ -41,4 +47,20 @@
     animation-duration: $duration;
     animation-name: $animation;
     animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+// from https://gist.github.com/ericam/1607696
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
 }

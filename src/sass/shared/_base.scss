@@ -1,6 +1,7 @@
+@include establish-baseline;
+
 body {
   font-family: $primaryFontFamily;
-  font-size: 100%;
   background: #EEE;
 }
 
@@ -26,11 +27,12 @@ div.wrapper {
 }
 
 div.page-content {
-  max-width: 600px;  
+  max-width: $wideWidth;  
+  margin-bottom: $spaceBetweenContentAndFooter;
 }
 
-div.page-content {
-  line-height: $baseLineHeight;
+#post .page-content {
+  max-width: $narrowWidth;
 }
 
 article { clear: both; }

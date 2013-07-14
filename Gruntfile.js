@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 		jekyll: {
 			debug: {
 				src: 'src',
-				dest: 'C:\\webapps\\mysite'
+				dest: 'C:\\inetpub\\wwwroot'
 			},
 			prod: {
 				src: './src',

@@ -1,38 +1,67 @@
 .primary-nav {
-	&:after { @include clearFix(); }
-
-	@include breakpoint(hero-gets-to-narrow) {
-		display: none;
-	}
-
 	ul {
-		float: right;
 		li {		
-			float: left;
 			padding: 0.2em pixels-to-ems(10);
 			a {
 				@include transition(all 0.25s);
-				display: block;
 				font-weight: 100;
 				font-family: 'roboto condensed';
-				color: $primaryNavColor;
 				text-decoration: none;
 				text-transform: uppercase;
-				font-size: pixels-to-ems(25);
-				margin-top: $navVerticalSpacing;
-				margin-bottom: $navVerticalSpacing;
-				border-bottom: solid #EEE 1px;
 			}
 			&.active a {	
 				@include transition(all 0.25s);
-				border-bottom: solid #999 1px;
-				color: darken($primaryNavColor, 20%);
 			}
-			&:hover a {
-				@include transition(all 0.25s);
-				border-bottom: solid #CCC 1px;
-				color: darken($primaryNavColor, 20%);				
-			}	
+		}
+	}
+
+	&:after { @include clearFix(); }
+
+	@include breakpoint(hero-gets-too-narrow) {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		text-align: center;
+		ul {
+			background: rgba(255,255,255,0.2);
+			@include border-bottom-radius();
+			padding-top: $navVerticalSpacing; 
+			padding-bottom: $navVerticalSpacing; 	
+			li {
+				display: inline;
+				font-size: pixels-to-ems(18);
+				a {
+					color: darken($primaryNavColor, 20%);
+				}
+				&.active a, &:hover a {
+					color: darken($primaryNavColor, 45%);
+				}
+			}
+		}
+	}
+
+	@include breakpoint(wide-hero) {
+		ul {
+			float: right;
+			li {
+				float: left;
+				font-size: pixels-to-ems(25);
+				a {
+					display: block;
+					margin-top: $navVerticalSpacing;
+					margin-bottom: $navVerticalSpacing;
+					border-bottom: solid #EEE 1px;
+					color: $primaryNavColor;					
+				}
+				&.active a {	
+					border-bottom: solid #999 1px;
+				}
+				&:hover a {
+					@include transition(all 0.25s);
+					border-bottom: solid #CCC 1px;
+					color: darken($primaryNavColor, 20%);				
+				}
+			}
 		}
 	}
 }

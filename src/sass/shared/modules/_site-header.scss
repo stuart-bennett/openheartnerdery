@@ -1,7 +1,15 @@
 header.site-header {
-  background: url(../assets/backgrounds/wall.JPG) no-repeat;
+  
+  background: url(../assets/backgrounds/wall.JPG) no-repeat top;
+  background-size: 100%;
+
+  @include breakpoint(so-narrow-that-header-wraps) {
+    background: url(../assets/backgrounds/wall-with-fade.JPG) no-repeat top;
+    background-size: 100%;
+  }
+
   background-position: top;
-  padding: 1em 0 3em 0;
+  padding: 3em 0 3em 0;
   margin-bottom: 2em;
   background-color: #EDEDED;
   background-size: 100%;
@@ -12,36 +20,45 @@ header.site-header {
     font-family: $secondaryFontFamily;
     float: left;
     clear: both;
-    font-size: pixels-to-ems(27);
-    line-height: 1.4em;
+    @include adjust-font-size-to(27px);
+
     color: #FFF;
-    @include text-shadow(#000 2px 2px 0);
+    @include text-shadow(#000 1px 1px 0);
     a { 
-      @include text-shadow(darken($primaryLinkColor, 20%) 2px 2px 0); 
+      @include text-shadow(darken($primaryLinkColor, 20%) 1px 1px 0); 
     }
   }
 
-  @include breakpoint(hero-gets-to-narrow) {
+  @include breakpoint(hero-gets-too-narrow) {
     p {
       @include transition(all 0.5s);
-      font-size: pixels-to-ems(18);
+      @include adjust-font-size-to(16px);
       a {
-        @include text-shadow(none);
         display: block;
         text-align: center;
       }
     }
-  }  
+  }
+
+  @include breakpoint(so-narrow-that-header-wraps) {
+    p {
+      @include text-shadow(none);
+      color: $primaryColor;
+      a {
+        @include text-shadow(none);        
+      }
+    }
+  }
 
   h1 {
     font-family: arial;
     text-transform: uppercase;
     font-weight: 100;
-    font-size: pixels-to-ems(50);
+    @include adjust-font-size-to(50px);    
+    @include rhythm(1,1,0,2,50px);
     text-align: center;
     clear: both;
     background: none;
-    margin-bottom: 0.5em;
     a {
       color: $siteTitleTextColor;
       @include text-shadow($siteTitleShadowColor 2px 3px 0);

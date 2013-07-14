@@ -1,9 +1,13 @@
 // Layout
-$contentBlockPaddingBottom: 1em;
+$contentBlockPaddingBottom   : 1em;
+$spaceBetweenContentAndFooter: 5em;
+$wideWidth  			     : 1000px;
+$narrowWidth				 : 600px;		// Narrow down characters per line on a more "read-heavy" page like a blog post
+
 
 // Type
-$baseline			: 16;
-$baseLineHeight  	: pixels-to-ems(24, $baseline);
+$base-font-size 	: 16px;
+$base-line-height	: 24px;
 $primaryFontFamily  : 'Antic Slab', serif;
 $secondaryFontFamily: 'Sanchez', serif;
 $monoSpaceFontFamily: monospace;
