@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada arcu non dui tincidunt, in rhoncus massa consectetur. Proin nec facilisis elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed scelerisque, dolor eget 
+
 date:   2013-07-10 20:26:41
 categories: jekyll update
 ---

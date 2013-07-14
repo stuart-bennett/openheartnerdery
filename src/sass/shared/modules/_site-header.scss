@@ -1,0 +1,54 @@
+header.site-header {
+  background: url(../assets/backgrounds/wall.JPG) no-repeat;
+  background-position: top;
+  padding: 1em 0 3em 0;
+  margin-bottom: 2em;
+  background-color: #EDEDED;
+  background-size: 100%;
+
+  p {
+    margin: 0.4em 0;
+    padding: 0.4em;
+    font-family: $secondaryFontFamily;
+    float: left;
+    clear: both;
+    font-size: pixels-to-ems(27);
+    line-height: 1.4em;
+    color: #FFF;
+    @include text-shadow(#000 2px 2px 0);
+    a { 
+      @include text-shadow(darken($primaryLinkColor, 20%) 2px 2px 0); 
+    }
+  }
+
+  @include breakpoint(hero-gets-to-narrow) {
+    p {
+      @include transition(all 0.5s);
+      font-size: pixels-to-ems(18);
+      a {
+        @include text-shadow(none);
+        display: block;
+        text-align: center;
+      }
+    }
+  }  
+
+  h1 {
+    font-family: arial;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: pixels-to-ems(50);
+    text-align: center;
+    clear: both;
+    background: none;
+    margin-bottom: 0.5em;
+    a {
+      color: $siteTitleTextColor;
+      @include text-shadow($siteTitleShadowColor 2px 3px 0);
+      text-decoration: none;
+      font-family: 'roboto condensed';
+    }
+  }  
+
+  &:after { @include clearFix(); }
+}

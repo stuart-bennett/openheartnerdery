@@ -14,6 +14,12 @@
   visibility: hidden;
 }
 
+@mixin breakpoint($point) {
+  @if $point == hero-gets-to-narrow {
+    @media (max-width: 711px) { @content; }
+  }
+}
+
 // From: https://gist.github.com/Integralist/3931680
 @mixin animation ($delay, $duration, $animation) {
     -webkit-animation-delay: $delay;

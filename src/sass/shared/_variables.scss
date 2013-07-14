@@ -9,7 +9,16 @@ $secondaryFontFamily: 'Sanchez', serif;
 $monoSpaceFontFamily: monospace;
 $primaryColor 		: #000;
 $primaryColorLighter: #999;
+$primaryLinkColor   : #2B90D7;
 
 // Code
 $codeBackgroundColor: #333;
 $codeTextColor: #FFF;
+
+// Site Title Header
+$siteTitleTextColor  : #FFF;
+$siteTitleShadowColor: #000;
+
+// Primary Navigation
+$navVerticalSpacing: pixels-to-ems(7);
+$primaryNavColor   : #CCC;

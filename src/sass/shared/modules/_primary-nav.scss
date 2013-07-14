@@ -1,0 +1,38 @@
+.primary-nav {
+	&:after { @include clearFix(); }
+
+	@include breakpoint(hero-gets-to-narrow) {
+		display: none;
+	}
+
+	ul {
+		float: right;
+		li {		
+			float: left;
+			padding: 0.2em pixels-to-ems(10);
+			a {
+				@include transition(all 0.25s);
+				display: block;
+				font-weight: 100;
+				font-family: 'roboto condensed';
+				color: $primaryNavColor;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-size: pixels-to-ems(25);
+				margin-top: $navVerticalSpacing;
+				margin-bottom: $navVerticalSpacing;
+				border-bottom: solid #EEE 1px;
+			}
+			&.active a {	
+				@include transition(all 0.25s);
+				border-bottom: solid #999 1px;
+				color: darken($primaryNavColor, 20%);
+			}
+			&:hover a {
+				@include transition(all 0.25s);
+				border-bottom: solid #CCC 1px;
+				color: darken($primaryNavColor, 20%);				
+			}	
+		}
+	}
+}
