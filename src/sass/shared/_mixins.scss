@@ -19,11 +19,43 @@
     @media (max-width: 858px) { @content; }
   }
   @if $point == so-narrow-that-header-wraps {
-    @media (max-width: 559px) { @content; }
+    @media (max-width: 577px) { @content; }
   }  
-  @else if $point == wide-hero {
+  @if $point == wide-hero {
     @media (min-width: 859px) { @content; }
   }
+  @if $point == really-wide {
+    @media (min-width: 1280px) { @content; }
+  }
+}
+
+@mixin hdAwareBackgroundImage($imgWithoutExtension, $extension) {
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 1),
+    only screen and (-min--moz-device-pixel-ratio: 1),
+    only screen and (min--moz-device-pixel-ratio: 1),
+    only screen and (min-resolution: 1dppx)
+    {
+      background-image: url($imgWithoutExtension+"."+$extension);
+    }
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-min--moz-device-pixel-ratio: 1.5),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 1.5dppx) 
+    {
+      background-image: url($imgWithoutExtension+"@1.5x."+$extension);
+    }      
+    
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-min--moz-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (min-resolution: 2dppx) 
+    {
+      background-image: url($imgWithoutExtension+"@2x."+$extension);
+    }
 }
 
 // From: https://gist.github.com/Integralist/3931680

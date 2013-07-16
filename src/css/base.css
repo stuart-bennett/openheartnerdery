@@ -248,22 +248,91 @@ article {
 
 /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
 header.site-header {
-  background: url(../assets/backgrounds/wall.JPG) no-repeat top;
-  background-size: 100%;
   background-position: top;
   padding: 3em 0 3em 0;
   margin-bottom: 2em;
   background-color: #EDEDED;
   background-size: 100%;
 }
-@media (max-width: 559px) {
+@media (min-width: 859px) {
   /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
   header.site-header {
-    background: url(../assets/backgrounds/wall-with-fade.JPG) no-repeat top;
+    background-repeat: no-repeat;
+    background-position: top;
     background-size: 100%;
   }
 }
-/* line 17, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+@media only screen and (min-width: 859px) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-width: 859px) and (-min--moz-device-pixel-ratio: 1), only screen and (min-width: 859px) and (min--moz-device-pixel-ratio: 1), only screen and (min-width: 859px) and (min-resolution: 1dppx) {
+  /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  header.site-header {
+    background-image: url("../assets/backgrounds/out-to-sea.JPG");
+  }
+}
+@media only screen and (min-width: 859px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 859px) and (-min--moz-device-pixel-ratio: 1.5), only screen and (min-width: 859px) and (min--moz-device-pixel-ratio: 1.5), only screen and (min-width: 859px) and (min-resolution: 1.5dppx) {
+  /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  header.site-header {
+    background-image: url("../assets/backgrounds/out-to-sea@1.5x.JPG");
+  }
+}
+@media only screen and (min-width: 859px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 859px) and (-min--moz-device-pixel-ratio: 2), only screen and (min-width: 859px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 859px) and (min-resolution: 2dppx) {
+  /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  header.site-header {
+    background-image: url("../assets/backgrounds/out-to-sea@2x.JPG");
+  }
+}
+@media (max-width: 858px) {
+  /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  header.site-header {
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+  }
+}
+@media only screen and (max-width: 858px) and (-webkit-min-device-pixel-ratio: 1), only screen and (max-width: 858px) and (-min--moz-device-pixel-ratio: 1), only screen and (max-width: 858px) and (min--moz-device-pixel-ratio: 1), only screen and (max-width: 858px) and (min-resolution: 1dppx) {
+  /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  header.site-header {
+    background-image: url("../assets/backgrounds/out-to-sea-smaller.JPG");
+  }
+}
+@media only screen and (max-width: 858px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 858px) and (-min--moz-device-pixel-ratio: 1.5), only screen and (max-width: 858px) and (min--moz-device-pixel-ratio: 1.5), only screen and (max-width: 858px) and (min-resolution: 1.5dppx) {
+  /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  header.site-header {
+    background-image: url("../assets/backgrounds/out-to-sea-smaller@1.5x.JPG");
+  }
+}
+@media only screen and (max-width: 858px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 858px) and (-min--moz-device-pixel-ratio: 2), only screen and (max-width: 858px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 858px) and (min-resolution: 2dppx) {
+  /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  header.site-header {
+    background-image: url("../assets/backgrounds/out-to-sea-smaller@2x.JPG");
+  }
+}
+@media (max-width: 577px) {
+  /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  header.site-header {
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+  }
+}
+@media only screen and (max-width: 577px) and (-webkit-min-device-pixel-ratio: 1), only screen and (max-width: 577px) and (-min--moz-device-pixel-ratio: 1), only screen and (max-width: 577px) and (min--moz-device-pixel-ratio: 1), only screen and (max-width: 577px) and (min-resolution: 1dppx) {
+  /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  header.site-header {
+    background-image: url("../assets/backgrounds/out-to-sea-smaller-still.JPG");
+  }
+}
+@media only screen and (max-width: 577px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 577px) and (-min--moz-device-pixel-ratio: 1.5), only screen and (max-width: 577px) and (min--moz-device-pixel-ratio: 1.5), only screen and (max-width: 577px) and (min-resolution: 1.5dppx) {
+  /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  header.site-header {
+    background-image: url("../assets/backgrounds/out-to-sea-smaller-still@1.5x.JPG");
+  }
+}
+@media only screen and (max-width: 577px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 577px) and (-min--moz-device-pixel-ratio: 2), only screen and (max-width: 577px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 577px) and (min-resolution: 2dppx) {
+  /* line 1, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  header.site-header {
+    background-image: url("../assets/backgrounds/out-to-sea-smaller-still@2x.JPG");
+  }
+}
+/* line 33, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
 header.site-header p {
   margin: 0.4em 0;
   padding: 0.4em;
@@ -275,12 +344,12 @@ header.site-header p {
   color: #FFF;
   text-shadow: black 1px 1px 0;
 }
-/* line 27, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+/* line 43, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
 header.site-header p a {
   text-shadow: #195783 1px 1px 0;
 }
 @media (max-width: 858px) {
-  /* line 33, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  /* line 49, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
   header.site-header p {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -289,24 +358,24 @@ header.site-header p a {
     font-size: 1em;
     line-height: 1.5em;
   }
-  /* line 36, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  /* line 52, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
   header.site-header p a {
     display: block;
     text-align: center;
   }
 }
-@media (max-width: 559px) {
-  /* line 44, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+@media (max-width: 577px) {
+  /* line 60, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
   header.site-header p {
     text-shadow: none;
     color: black;
   }
-  /* line 47, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+  /* line 63, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
   header.site-header p a {
     text-shadow: none;
   }
 }
-/* line 53, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+/* line 69, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
 header.site-header h1 {
   font-family: arial;
   text-transform: uppercase;
@@ -321,14 +390,14 @@ header.site-header h1 {
   clear: both;
   background: none;
 }
-/* line 62, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+/* line 78, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
 header.site-header h1 a {
   color: white;
   text-shadow: black 2px 3px 0;
   text-decoration: none;
   font-family: 'roboto condensed';
 }
-/* line 70, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
+/* line 86, G:/code/openheartnerdery/src/sass/shared/modules/_site-header.scss */
 header.site-header:after {
   content: ".";
   display: block;

@@ -1,10 +1,27 @@
 header.site-header {
   
-  background: url(../assets/backgrounds/wall.JPG) no-repeat top;
-  background-size: 100%;
+  @include breakpoint(wide-hero) {
+    @include hdAwareBackgroundImage("../assets/backgrounds/out-to-sea", "JPG");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;  
+  }
+
+  @include breakpoint(hero-gets-too-narrow) {
+    @include hdAwareBackgroundImage("../assets/backgrounds/out-to-sea-smaller", "JPG");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+  }
+
+  @include breakpoint(really-wide) {
+    // Maybe a bigger res image for really wide displays?
+  }
 
   @include breakpoint(so-narrow-that-header-wraps) {
-    background: url(../assets/backgrounds/wall-with-fade.JPG) no-repeat top;
+    @include hdAwareBackgroundImage("../assets/backgrounds/out-to-sea-smaller-still", "JPG");
+    background-repeat: no-repeat;
+    background-position: top;
     background-size: 100%;
   }
 
