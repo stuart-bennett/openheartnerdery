@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Establishing this sites new workflow on Windows"
-subtitle:  Setting up Grunt, Compass & Jekyll on Windows 7 64-Bit
+title:  Establishing a modern web development workflow on Windows
+subtitle:  Setting up Grunt, Compass & Jekyll on Windows 7 (64 bit)
 date:   2013-07-10 20:26:41
 categories: jekyll compass grunt build automation
 ---
@@ -10,7 +10,7 @@ Whilst I run and use Fedora, I spend a lot of time in Windows (by day I'm a .NET
 
 For total clarity I'm running Ruby 1.9.3, I plan to upgrade to version 2 soon but this post covers 1.9.3 so any inconsistences may be down to this.
 
-* 1. Install Ruby & the Development Kit
+####1. Install Ruby & the Ruby Development Kit
 Go here <a href="http://rubyinstaller.org/downloads/" class="external-resource">http://rubyinstaller.org/downloads/</a> and pick a version of Ruby (I'm using 1.9.3 in this post) from the "RubyInstallers" section. Once downloaded, (leave the downloads page open, you'll be coming back!) run the installer - it's a really straight forward installation.
 
 While you are here, grab the latest file that looks something like DevKit-tdm-x-x.x.x-xxxxxxx-xxxx-sfx.exe from the "Other Useful Downloads" -> "Development Kit" section. Run this DevKit file and specify a location where you want the files to be extracted to. By default it'll extract to the directory where the file was executed from, I changed mine to a more specific C:\programs\rubydevkit.
@@ -26,7 +26,7 @@ This will install the necessary executables that ultimately make it possible for
 
 This completes the installation of Ruby. You could happily go off and do some ruby stuff now like getting started with Rails.
 
-* 2. Install Compass & Jekyll
+####2. Install Compass & Jekyll
 
 This is really straight forward. Open Command Prompt and issue the following (let's assume my base directory for this project is C:\site):
 
@@ -112,7 +112,7 @@ jekyll build
 You should now see a nice, clean jekyll output telling you that your site has been generated into a subdirectory of \_site. Open your web browser go file -> open. Locate the index.html from in the build subdirectory. You should see you site rendered, ready for deployment.
 
 
-* 3. Installing Grunt and configuring the build
+####3. Installing Grunt and configuring the build
 
 When I first starting building this workflow for Windows, I used a .bat file for build automation. To establish a cross-platform build I decided to have a go with the popular JavaScript task runner <a href="http://gruntjs.com/">Grunt</a>.
 
@@ -143,8 +143,9 @@ We're almost there. There are two files that Grunt needs to be able to perform t
 
 - package.json - A Node.js convention used to express information about the project including, what are interested in here, module dependencies.
 - Gruntfile.js - Used to specify targets and execution order (think of this like a Makefile or csproj equivalent)
+
 	
-### package.json	
+##### package.json	
 Instead of asking Node to install each one these modules individually, we can leverage the package.json convention of Node.js to refer to a list of dependencies and issue a single command to install them all. First, create a new file "package.json" in the base directory of the project (remember this is "C:\site" for me):
  
 {% highlight json %}
@@ -171,7 +172,7 @@ Within the directory having the package.json file, issue the command:
 	
 The Node Package Manager knows to look for a package.json and parse it's devDependencies. Anything you haven't got installed locally, it will fetch from the Node Module repository and install locally to the /node_modules subdirectory.
 
-### Gruntfile.js
+##### Gruntfile.js
 
 Grunt expects us to define our build tasks in JavaScript. Here's a stripped down, esssentials-only version of a Gruntfile which will serve as a starting point. This will provide us with a simple "default" task that does nothing but output to the console that we're calling the target.
 

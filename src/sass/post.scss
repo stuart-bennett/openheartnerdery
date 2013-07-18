@@ -1,0 +1,33 @@
+@import "compass/typography/vertical_rhythm";
+.post {
+	header {
+		h2 {
+			@include adjust-font-size-to(30px);
+		}
+		h3 {
+			@include adjust-font-size-to(18px);
+		}
+	}
+	span.meta { 
+		display: block;
+		text-align: center;
+	}
+
+	p {
+		@include rhythm(1, 0, 0, 1, 16px);
+	}
+
+	ul {
+		margin: 0 0 0 2em;
+	}
+
+	h4 {
+		@include adjust-font-size-to(30px);
+		@include rhythm(0.3, 0, 0, 0.3, 30px);
+	}
+
+	h5 {
+		@include adjust-font-size-to(25px);
+		@include rhythm(0.3, 0, 0, 0.3, 25px);
+	}
+}

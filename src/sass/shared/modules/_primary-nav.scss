@@ -41,6 +41,8 @@
 	}
 
 	@include breakpoint(wide-hero) {
+		background: $navBarBackgroundColor;
+		border-bottom: solid darken($navBarBackgroundColor, 10%) 1px;
 		ul {
 			float: right;
 			li {
@@ -50,11 +52,11 @@
 					display: block;
 					margin-top: $navVerticalSpacing;
 					margin-bottom: $navVerticalSpacing;
-					border-bottom: solid #EEE 1px;
+					border-bottom: solid $navBarBackgroundColor 1px;
 					color: $primaryNavColor;					
 				}
-				&.active a {	
-					border-bottom: solid #999 1px;
+				&.active a {
+					font-weight: bold;
 				}
 				&:hover a {
 					@include transition(all 0.25s);

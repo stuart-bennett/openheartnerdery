@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />  
   <script type="text/javascript" src="scripts/modernizr.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Glegoo|Arvo:400,700,400italic,700italic|Antic+Slab|Kreon:300,400,700|Crete+Round:400,400italic|Copse|Sanchez:400italic,400|Trocchi|Bree+Serif|Enriqueta:400,700|Andada' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/homepage.css" type="text/css" />
-
+  <link rel="stylesheet" href="/css/base.css" type="text/css" />
+ <link rel="stylesheet" href="/css/post.css" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&subset=latin,greek-ext,greek,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 
 </head>
@@ -30,18 +30,16 @@
 
 </header>
 
-<div class="wrapper page-content">
+<article class="post wrapper page-content">
 	<header class="page-header">
 		<h2>{{ page.title }}</h2>
 		<h3>{{ page.subtitle}}</h3>
+    <span class="meta">{{ page.date | date_to_string }}</span>
 	</header>
 
-	<p class="meta">{{ page.date | date_to_string }}</p>
-
-	<div class="post">
 	{{ content }}
-	</div>
-</div>
+
+</article>
 
 <footer class="site-footer">
   <div class="wrapper">

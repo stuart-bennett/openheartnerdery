@@ -1,11 +1,15 @@
-pre {
+.highlight, pre {
 	@include contentBlock();
 	@include border-radius();
 	@include text-shadow(#000 1px 1px 0);
 	font-family: $monoSpaceFontFamily;
-	background-color: $codeBackgroundColor;
+}
+
+pre {
 	color: $codeTextColor;
-	padding: 1em;
+	background-color: $codeBackgroundColor;
+	padding: 1em;	
+	overflow: auto;
 }
 
 .highlight  { background: #303030; color: #e5e5e5}

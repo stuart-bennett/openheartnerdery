@@ -1,4 +1,5 @@
 // Layout
+$mainBackgroundColor		 : #EEE;
 $contentBlockPaddingBottom   : 1em;
 $spaceBetweenContentAndFooter: 5em;
 $wideWidth  			     : 1000px;
@@ -24,5 +25,6 @@ $siteTitleTextColor  : #FFF;
 $siteTitleShadowColor: #000;
 
 // Primary Navigation
-$navVerticalSpacing: pixels-to-ems(7);
-$primaryNavColor   : #CCC;
+$navBarBackgroundColor: $mainBackgroundColor;
+$navVerticalSpacing	  : pixels-to-ems(7);
+$primaryNavColor      : #999;

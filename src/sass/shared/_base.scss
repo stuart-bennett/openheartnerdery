@@ -2,7 +2,7 @@
 
 body {
   font-family: $primaryFontFamily;
-  background: #EEE;
+  background: $mainBackgroundColor;
 }
 
 a {
@@ -19,14 +19,14 @@ h1 a, h2 a, h3 a {
 
 p { @include contentBlock(); }
 
-div.wrapper {
+.wrapper {
   position: relative;
   margin: 0 auto;
   width: 80%;
   max-width: 1000px;
 }
 
-div.page-content {
+.page-content {
   max-width: $wideWidth;  
   margin-bottom: $spaceBetweenContentAndFooter;
 }

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />  
   <script type="text/javascript" src="scripts/modernizr.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Glegoo|Arvo:400,700,400italic,700italic|Antic+Slab|Kreon:300,400,700|Crete+Round:400,400italic|Copse|Sanchez:400italic,400|Trocchi|Bree+Serif|Enriqueta:400,700|Andada' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/base.css" type="text/css" />
   <link rel="stylesheet" href="/css/homepage.css" type="text/css" />
 
 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&subset=latin,greek-ext,greek,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
@@ -13,14 +14,16 @@
 </head>
 <body>
 
+<section class="primary-nav">
 <div class="wrapper">
-  <nav class="primary-nav">
+  <nav>
     <ul>
       <li {% if page.path == 'index.html' %} class="active"{% endif %}><a href="/">Home</a></li>
       <li {% if page.path == 'resume.html' %} class="active"{% endif %}><a href="/resume.html">Résumé</a></li>
     </ul>
   </nav>
 </div>
+</section>
 
 <header class="site-header homepage">
 
@@ -34,6 +37,7 @@
   {{content}}
 </div>
 
+<!--
 <footer class="site-footer">
   <div class="wrapper">
     <div class="built-using">
@@ -47,6 +51,8 @@
     </div>
   </div>
 </footer>
+-->
+
 
 <script type="text/javascript">
 
