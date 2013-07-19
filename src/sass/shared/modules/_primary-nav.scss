@@ -1,4 +1,7 @@
 .primary-nav {
+	position: absolute;
+	top: 0;
+	width: 100%;
 	ul {
 		li {		
 			padding: 0.2em pixels-to-ems(10);
@@ -18,12 +21,9 @@
 	&:after { @include clearFix(); }
 
 	@include breakpoint(hero-gets-too-narrow) {
-		position: absolute;
-		top: 0;
-		width: 100%;
 		text-align: center;
 		ul {
-			background: rgba(255,255,255,0.2);
+			background: rgba(255,255,255,0.5);
 			@include border-bottom-radius();
 			padding-top: $navVerticalSpacing; 
 			padding-bottom: $navVerticalSpacing; 	
@@ -41,8 +41,7 @@
 	}
 
 	@include breakpoint(wide-hero) {
-		background: $navBarBackgroundColor;
-		border-bottom: solid darken($navBarBackgroundColor, 10%) 1px;
+		background: rgba(255,255,255,0.5);
 		ul {
 			float: right;
 			li {
@@ -52,7 +51,7 @@
 					display: block;
 					margin-top: $navVerticalSpacing;
 					margin-bottom: $navVerticalSpacing;
-					border-bottom: solid $navBarBackgroundColor 1px;
+					border-bottom: solid #D2DAE1 1px;
 					color: $primaryNavColor;					
 				}
 				&.active a {

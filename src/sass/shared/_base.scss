@@ -33,6 +33,11 @@ p { @include contentBlock(); }
 
 #post .page-content {
   max-width: $narrowWidth;
+  p, .highlight, pre {
+    max-width: $narrowReadingWidth;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 article { clear: both; }

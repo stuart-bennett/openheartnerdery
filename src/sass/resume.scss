@@ -8,13 +8,11 @@
   .core-skills {
     float: left;
     padding: 0 3em;
-    font-family: 'Antic Slab';
   }
 
   .core-skills li {
     float: left;
     width: 30%;
-    line-height: 1.2em;
     margin-right: 1.25em;
     margin-bottom: 4em;
     height: 70px;
@@ -23,9 +21,8 @@
   .core-skills li .additional {
     display: block;
     color: #666;
-    margin-top: 0.3em;
-    font-size: 0.9em;
-    line-height: 1.2em;
+    @include adjust-font-size-to(14px, 0.75);
+    @include rhythm(0.3,0,0,0,12px);
   }
 
   header h2 {
@@ -87,21 +84,17 @@
   }
 
   section#employment ol.employment-history header .overview {
+    @include adjust-font-size-to(14px);
+    @include rhythm(1,0,0,1,14px);
     width: 100%;
   }
 
   section#employment ol.employment-history header .overview p {
-    font-family: 'Antic Slab';
-    line-height: 1.2em;
-    font-size: 1em;
-    padding: 0;
     color: #666;
   }
 
   #employment ol.employment-history .skills,
   #education .summary {
-    font-family: 'Antic Slab';
-    line-height: 1.4em;
     float: right;
     width: 70%;
   }
