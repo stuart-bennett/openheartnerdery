@@ -4,7 +4,6 @@
 	<title>{{ page.title }}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />  
-  <script type="text/javascript" src="scripts/modernizr.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Glegoo|Arvo:400,700,400italic,700italic|Antic+Slab|Kreon:300,400,700|Crete+Round:400,400italic|Copse|Sanchez:400italic,400|Trocchi|Bree+Serif|Enriqueta:400,700|Andada' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/base.css" type="text/css" />
   <link rel="stylesheet" href="/css/homepage.css" type="text/css" />
@@ -12,9 +11,13 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&subset=latin,greek-ext,greek,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 
 <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic|Donegal+One|Noticia+Text:400,700,700italic,400italic|Merriweather:400,300italic,300,700,900italic,700italic,900,400italic|Cantarell:400,400italic,700,700italic|Habibi|Quando|Open+Sans:400,300,300italic,400italic,600,600italic,800italic,800,700italic,700|Poly:400,400italic|Shanti|Headland+One&subset=latin,latin-ext,vietnamese,cyrillic-ext,greek-ext,greek,cyrillic' rel='stylesheet' type='text/css'>
+	
+    <script type="text/javascript" data-main="/scripts/app" src="/scripts/libs/require.min.js"></script>
 
 </head>
 <body>
+
+<div id="test">
 
 <section class="primary-nav">
 <div class="wrapper">
@@ -26,6 +29,9 @@
 	</nav>
 </div>
 </section>
+
+</div>
+
 
 <header class="site-header">
 
@@ -39,7 +45,7 @@
 
 </header>
 
-<div class="wrapper page-content homepage">
+<div class="content wrapper homepage">
 	{{content}}
 </div>
 
