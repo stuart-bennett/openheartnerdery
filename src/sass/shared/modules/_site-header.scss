@@ -32,12 +32,11 @@ header.site-header {
   background-size: 100%;
 
   p {
-    margin: 0.4em 0;
-    padding: 0.4em;
     font-family: $secondaryFontFamily;
     float: left;
     clear: both;
     @include adjust-font-size-to(27px);
+    @include rhythm(0,0,0,0,27px);
 
     color: #FFF;
     @include text-shadow(#000 1px 1px 0);
@@ -45,6 +44,17 @@ header.site-header {
       @include text-shadow(darken($primaryLinkColor, 20%) 1px 1px 0); 
     }
   }
+
+  p.squish {
+    @include animation(all, 1s, squish);
+    overflow: hidden;
+  }
+
+  p.expand {
+    @include animation(all, 1s, expand);
+    overflow: hidden;
+  }
+
 
   @include breakpoint(hero-gets-too-narrow) {
     p {

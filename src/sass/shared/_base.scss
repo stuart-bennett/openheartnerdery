@@ -1,5 +1,54 @@
 @include establish-baseline;
 
+@include keyframes(slideContentOut) {
+  0%
+  { 
+    @include opacity(1);
+    @include translate(0, 0); 
+  }
+  
+  100% {
+    @include opacity(0);
+    @include translate(300px, 0); 
+  }
+}
+
+@include keyframes(slideContentIn) {
+  0%
+  { 
+    @include opacity(0);
+    @include translate(-300px, 0); 
+  }
+  
+  100% {
+    @include opacity(1);
+    @include translate(0, 0); 
+  }
+}
+
+@include keyframes(squish) {
+  0%
+  {
+    max-height: 200px;
+  }
+  
+  100% {
+    max-height: 0;
+  }  
+}
+
+@include keyframes(expand) {
+  0%
+  { 
+    max-height: 0;
+  }
+  
+  100% {
+    max-height: 200px;
+  }  
+}
+
+
 body {
   font-family: $primaryFontFamily;
   background: $mainBackgroundColor;
@@ -29,6 +78,14 @@ p { @include contentBlock(); }
 .page-content {
   max-width: $wideWidth;  
   margin-bottom: $spaceBetweenContentAndFooter;
+}
+
+.page-content.slide-out {
+  @include animation(0s, 0.4s, slideContentOut);
+}
+
+.page-content.slide-in {
+  @include animation(0s, 0.4s, slideContentIn);
 }
 
 #post .page-content {
