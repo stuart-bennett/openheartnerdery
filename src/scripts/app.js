@@ -1,4 +1,4 @@
-/*global $, require, Pjax, history, document, test, requirejs, console, alert */
+/*global $, require, Pjax, window, history, document, test, requirejs, console, alert */
 
 requirejs.config({
     paths: {
@@ -27,6 +27,13 @@ require(['loader'], function(loader) {
     });
     loader.on('updated', function(args) {
         var newLocation = args.location;
-        history.pushState({}, newLocation, newLocation);
+        history.pushState({ content: args.oldContent }, newLocation, newLocation);
+        history.pushState({ content: args.oldContent }, newLocation, newLocation);
     });
+
+    window.onpopstate = function(evt) {
+        var state = evt.state;
+        console.log(state);
+        loader.replacePageContent(state.content);
+    };
 });

@@ -1,4 +1,4 @@
-/*global console, define, $ */
+/*global console, define, alert,  $ */
 define(["jquery", "rsvp"], function($, RSVP) {
     'use strict';
     var mod = {
@@ -15,7 +15,15 @@ define(["jquery", "rsvp"], function($, RSVP) {
             this.headerSelector = options.headerSelector;
             this.selector = options.selector;
             RSVP.EventTarget.mixin(this);
-            $("a").on("click", $.proxy(mod.handleAnchor, mod));
+            this.applyEvents();
+        },
+
+        applyEvents: function(container) {
+            if (!container) {
+                $("a").on("click", $.proxy(this.handleAnchor, this));
+            } else {
+                $("a", container).on("click", $.proxy(this.handleAnchor, this));
+            }
         },
 
         handleAnchor: function(evt) {
@@ -73,8 +81,10 @@ define(["jquery", "rsvp"], function($, RSVP) {
                 var oldContainer = this.container;
                 oldContainer.replaceWith(contents);
                 this.container = $(this.selector);
+                this.applyEvents(this.container);
                 this.container.addClass("slide-in");
             }, this));
+            this.container.removeClass("slide-in");
             this.container.addClass("slide-out");
         }
     };
