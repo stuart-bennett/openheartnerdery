@@ -1,4 +1,4 @@
-/*global console, define, alert,  $ */
+/*global console, define, document, alert, history, $ */
 define(["jquery", "rsvp"], function($, RSVP) {
     'use strict';
     var mod = {
@@ -14,8 +14,14 @@ define(["jquery", "rsvp"], function($, RSVP) {
             this.container = $(options.selector);
             this.headerSelector = options.headerSelector;
             this.selector = options.selector;
+            this.headerTransitionManager = options.headerTransitionManager;
+            this.bodyTransitionManager = options.bodyTransitionManager;
             RSVP.EventTarget.mixin(this);
             this.applyEvents();
+            history.replaceState({
+                headerContent: $("<div></div>").append(this.headerContainer.clone()).html(),
+                content: $("<div></div>").append(this.container.clone()).html()
+            }, document.location, document.location);
         },
 
         applyEvents: function(container) {
@@ -40,18 +46,34 @@ define(["jquery", "rsvp"], function($, RSVP) {
                 return true;
             }
 
-            this.doNetworkCall(href);
+            this.updatePage(href).done($.proxy(function() {
+                this.container = $(this.container.selector);
+                this.headerContainer = $(this.headerContainer.selector);
+                this.applyEvents(this.headerContainer);
+                this.applyEvents(this.container);
+                this.notifyPageUpdateWasSuccessful(href);
+            }, this));
         },
 
-        doNetworkCall: function(url) {
-            var oldContent = this.container.html();
+        notifyPageUpdateWasSuccessful: function(hrefOfNewPage) {
+            var content = '',
+                headerContent = '';
+            headerContent = $("<div></div>").append(this.headerContainer.clone()).html();
+            content = $("<div></div>").append(this.container.clone()).html();
+            this.trigger("updated", {
+                content: content,
+                headerContent: headerContent,
+                location: hrefOfNewPage
+            });
+        },
+
+        updatePage: function(url) {
+            var dfd = new $.Deferred();
             $.get(url).done($.proxy(function(response) {
-                this.updateContainer(response);
-                this.trigger("updated", {
-                    oldContent: oldContent,
-                    location: url
-                });
+                this.updateContainer(response).done(function() { dfd.resolve(); });
             }, this));
+
+            return dfd.promise();
         },
 
         updateContainer: function(response) {
@@ -59,33 +81,22 @@ define(["jquery", "rsvp"], function($, RSVP) {
                 headerContent = '',
                 responseDom;
 
-            responseDom = $("<div>").append(response);
+            responseDom = $("<div></div>").append(response);
             headerContent = responseDom.find(this.headerSelector);
             bodyContent = responseDom.find(this.selector);
-            this.replaceHeaderContent(headerContent);
-            this.replacePageContent(bodyContent);
+            return $.when(this.replaceHeaderContent(headerContent), this.replacePageContent(bodyContent)).promise();
         },
 
         replaceHeaderContent: function(contents) {
-            this.headerContainer.on('animationend', $.proxy(function() {
-                var oldContainer = this.headerContainer;
-                oldContainer.replaceWith(contents);
-                this.headerContainer = $(this.headerSelector);
-                this.headerContainer.addClass(this.headerInTransitionClassName);
-            }, this));
-            this.headerContainer.addClass(this.headerOutTransitionClassName);
+            if (contents.length < 1) {
+                contents = "<p></p>";
+            }
+
+            return this.headerTransitionManager.startTransition(this.headerContainer, contents);
         },
 
         replacePageContent: function(contents) {
-            this.container.on('animationend', $.proxy(function() {
-                var oldContainer = this.container;
-                oldContainer.replaceWith(contents);
-                this.container = $(this.selector);
-                this.applyEvents(this.container);
-                this.container.addClass("slide-in");
-            }, this));
-            this.container.removeClass("slide-in");
-            this.container.addClass("slide-out");
+            return this.bodyTransitionManager.startTransition(this.container, contents);
         }
     };
 

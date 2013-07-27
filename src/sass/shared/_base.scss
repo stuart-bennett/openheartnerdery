@@ -88,7 +88,7 @@ p { @include contentBlock(); }
   @include animation(0s, 0.4s, slideContentIn);
 }
 
-#post .page-content {
+.page-content.post {
   max-width: $narrowWidth;
   p, .highlight, pre {
     max-width: $narrowReadingWidth;
