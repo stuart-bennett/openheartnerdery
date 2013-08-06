@@ -18,19 +18,10 @@ module.exports = function(grunt) {
 			},
 			prod: {
 				src: './src',
-				dest: 'C:\\webapps\\mysite'
+				dest: 'C:\\inetpub\\wwwroot'
 			}
 		},
-		jslint: {
-			files: [
-				'src/scripts/*.js'
-			]
-		},
 		watch: {
-			javascriptQualityCheck: {
-				files: ['src/scripts/*.js'],
-				tasks: ['jslint', 'jekyll:debug']
-			},
 			css: {
 				files: ['src/sass/shared/modules/*.scss','src/sass/shared/*.scss','src/sass/*.scss'],
 				tasks: ['compass:debug', 'jekyll:debug']
@@ -42,11 +33,11 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-jslint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('debug', ['jslint', 'compass:debug', 'jekyll:debug']);
-	grunt.registerTask('prod', ['jslint', 'compass:prod', 'jekyll:prod']);
+	grunt.registerTask('build', ['build:prod']);
+	grunt.registerTask('build:debug', ['compass:debug', 'jekyll:debug']);
+	grunt.registerTask('build:prod', ['compass:prod', 'jekyll:prod']);
 };

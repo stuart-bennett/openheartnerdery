@@ -53,9 +53,11 @@ jekyll build
 
 If you find that Jekyll outputs a warning along the lines of...
 
-	[your ruby build path]/spawn.rb:162: warning: cannot close fd before spawn
-	Liquid Exception: No such file or directory [reference to a jekyll post]
-	
+{% highlight text %}
+[your ruby build path]/spawn.rb:162: warning: cannot close fd before spawn
+Liquid Exception: No such file or directory [reference to a jekyll post]
+{% endhighlight %}
+
 ...then you'll also probably notice that your files have been generated but are empty! Sure enough <a href="http://stackoverflow.com/questions/17364028/jekyll-on-windows-pygments-not-working">someone has got a fix for this on StackOverflow</a>. It boils to down to an issue with the gem "pygments" (which was installed when we did a gem install of jekyll) as per the Stack Overflow post, downgrade the version of pygments to 0.5.0 like so:
 
 {% highlight bat %}
@@ -71,8 +73,10 @@ jekyll build
 
 If you see something along the lines of:
 
-	Liquid Exception: No such file or directory - python [ruby gem path]/pygments.rb-0.5.0/lib/pygments/mentos.py
-	
+{% highlight text %}
+Liquid Exception: No such file or directory - python [ruby gem path]/pygments.rb-0.5.0/lib/pygments/mentos.py
+{% endhighlight %}
+
 It means you either don't have Python installed or you don't have the Python interpreter in your PATH variable. If you are the former and don't have Python installed, grab the nice & friendly Windows Installer at <a href="http://www.python.org/download/">http://www.python.org/download/</a>. Get a version 2 build as opposed to any 3+ versions, the version I have installed is 2.7.5. Version 3+ may work but I recall reading about some compatibility issues with 3rd party libraries - I haven't tried this so by all means have a go at using the latest version.
 
 The version of Windows Installer I used doesn't put the <em>python</em> command into your PATH variables so it isn't globally available on the command line. If you find that you can't invoke...
@@ -89,11 +93,15 @@ echo %PATH%
 
 Copy and paste the output from the command line to notepad and save it somewhere. The output should just be a bunch of directory paths separated by semi-colons (;) like so:
 
-	C:\Windows\System32;C:\Program Files\SomeProgram
+{% highlight text %}
+C:\Windows\System32;C:\Program Files\SomeProgram
+{% endhighlight %}
 
 Now, depending on where you installed Python to (I installed to C:\Python27), run the following command:
 
-	SET PATH=%PATH%;C:\Python27
+{% highlight text %}
+SET PATH=%PATH%;C:\Python27
+{% endhighlight %}
 
 This simply sets the PATH variable to it's current value <em>plus</em> the new directory containing the python executables.
 
@@ -120,13 +128,17 @@ Grunt has a dependency on <a href="http://nodejs.org/">Node.js</a>. It's happy w
 
 With node installed, we need to install the _grunt-cli_ module globally. Issue the command:
 
-	npm install -g grunt-cli
+{% highlight text %}
+npm install -g grunt-cli
+{% endhighlight %}
 	
 This makes the command _grunt_ available to our command prompt. At this point, we still do not have the actual Grunt task runner installed, only the means to invoke an existing grunt task runner installation. This enables us to have different versions of Grunt running on different projects, which is of course, great if we're working with other developers across multiple projects.
 
 At this point we could issue the command:
 
-	npm install grunt
+{% highlight text %}
+npm install grunt
+{% endhighlight %}
 	
 This would install the Grunt task runner locally to this directory (it would install to a subdirectory /node_modules). This would enable us to run a simple Grunt build. However, if you're wanting to use a build automation tool like Grunt, chances are there's a few common tasks you want to perform on every build. In my case, I want to:
 
@@ -168,7 +180,9 @@ Save this file and if you want to verify the syntax of your json, run it through
 
 Within the directory having the package.json file, issue the command:
 
-	npm install
+{% highlight javascript %}
+npm install
+{% endhighlight %}
 	
 The Node Package Manager knows to look for a package.json and parse it's devDependencies. Anything you haven't got installed locally, it will fetch from the Node Module repository and install locally to the /node_modules subdirectory.
 
@@ -189,12 +203,16 @@ module.exports = function(grunt) {
 
 If you issue the command...
 
-	grunt
+{% highlight javascript %}
+grunt
+{% endhighlight %}
 	
 ... you should see that Grunt picks up the Gruntfile and outputs something along the lines of:
 
-	Running "default" task
-	Hi, from the "default" target
+{% highlight javascript %}
+Running "default" task
+Hi, from the "default" target
+{% endhighlight %}
 
 Grunt expects there to be a "default" task if you invoke a build like this. If you wanted to call it something other than "default", you have to invoke the _grunt_ command with an extra parameter, specifying the target to execute. Say, for example, you want to target to be called "sayHello". Change your Gruntfile like:
 
@@ -211,12 +229,15 @@ module.exports = function(grunt) {
 
 You would have to issue the command:
 
-	grunt sayHello
-
+{% highlight text %}
+grunt sayHello
+{% endhighlight %}
 
 First of all, I'm going to automate the compilation of my compass code using the targets provided by the _grunt-contrib-compass_ module. First thing to do is have the Gruntfile register the targets provided by this module. Adding the following line to the Gruntfile achieves this registration:
 
-	grunt.loadNpmTasks('grunt-contrib-compass');
+{% highlight javascript %}
+grunt.loadNpmTasks('grunt-contrib-compass');
+{% endhighlight %}
 	
 This needs to be done for every module that you are registering for Grunt targets. Now, to invoke the the compass target, we'll make it a dependency of the default target. THe entire Gruntfile should now look like this:
 
@@ -236,7 +257,9 @@ module.exports = function(grunt) {
 
 Notice the change of parameters in the _registerTask_ method call. We're registering a target called "default" that should in turn call the target "compass" which we have defined in the initConfig section. Now, when _grunt_ is invoked, the default target invokes the _compass_ target too. The code provided by the _grunt-contrib-compass_ module effectively translates this to a call equivalent to:
 
-	compass compile 
+{% highlight javascript %}
+compass compile 
+{% endhighlight %}
 
 For me, I've configured compass using _config.rb_ so the command knows where to look for my SASS files and where to output css. If you don't know how to do this, refer to the various config flags available in the <a href="http://compass-style.org/help/tutorials/configuration-reference/" class="external-resource">compass documentation</a>.
 
@@ -307,11 +330,14 @@ module.exports = function(grunt) {
 
 Now I can run:
 
-	grunt
-
+{% highlight javascript %}
+grunt
+{% endhighlight %}
 
 for non-minified, source commented version of the compass SASS -> CSS compilation, or:
 
-	grunt prod
+{% highlight javascript %}
+grunt prod
+{% endhighlight %}
 
 to get bandwidth-friendly minified, commentless CSS.
