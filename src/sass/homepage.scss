@@ -16,4 +16,11 @@
     width: 50%;
     float: left;
   }
+
+  @include breakpoint(so-narrow-that-header-wraps) {
+    section {
+      width: 100%;
+    }
+  }
+  
 }
