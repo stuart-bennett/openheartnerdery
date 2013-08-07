@@ -26,8 +26,8 @@ header.site-header {
   }
 
   background-position: top;
-  padding: 3em 0 3em 0;
   margin-bottom: 2em;
+  padding: 3em 0 3em 0;
   background-color: #EDEDED;
   background-size: 100%;
 
@@ -43,16 +43,6 @@ header.site-header {
     a { 
       @include text-shadow(darken($primaryLinkColor, 20%) 1px 1px 0); 
     }
-  }
-
-  p.squish {
-    @include animation(all, 1s, squish);
-    overflow: hidden;
-  }
-
-  p.expand {
-    @include animation(all, 1s, expand);
-    overflow: hidden;
   }
 
 

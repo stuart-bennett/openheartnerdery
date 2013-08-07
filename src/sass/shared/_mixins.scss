@@ -27,6 +27,9 @@
   @if $point == really-wide {
     @media (min-width: 1280px) { @content; }
   }
+  @if $point == resume-core-skills-wrap {
+    @media (max-width: 997px) { @content; }
+  }
 }
 
 @mixin hdAwareBackgroundImage($imgWithoutExtension, $extension) {

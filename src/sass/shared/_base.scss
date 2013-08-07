@@ -73,19 +73,20 @@ p { @include contentBlock(); }
   margin: 0 auto;
   width: 80%;
   max-width: 1000px;
+
+  @include breakpoint(so-narrow-that-header-wraps) {
+    width: 94%;
+    text-align: center;
+  }
+
+  @include breakpoint(hero-gets-too-narrow) {
+    width: 93%;
+  }
 }
 
 .page-content {
   max-width: $wideWidth;  
   margin-bottom: $spaceBetweenContentAndFooter;
-}
-
-.page-content.slide-out {
-  @include animation(0s, 0.4s, slideContentOut);
-}
-
-.page-content.slide-in {
-  @include animation(0s, 0.4s, slideContentIn);
 }
 
 .page-content.post {

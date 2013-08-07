@@ -8,6 +8,9 @@
   .core-skills {
     float: left;
     padding: 0 3em;
+    @include breakpoint(so-narrow-that-header-wraps) {
+      padding: 0;
+    }    
   }
 
   .core-skills li {
@@ -16,6 +19,13 @@
     margin-right: 1.25em;
     margin-bottom: 4em;
     height: 70px;
+
+    @include breakpoint(resume-core-skills-wrap) {
+      float: none;
+      height: auto;
+      width: 100%;
+      margin-bottom: 0.5em;
+    }
   }
 
   .core-skills li .additional {
@@ -44,16 +54,36 @@
     margin-bottom: 3em;
   }
 
+
   section#employment ol.employment-history header,
   #education ol li .category {
-    float: left;
-    width: 25%;
-    text-align: right;
+    @mixin headerDetailsOnTheSide {
+      float: left;
+      width: 25%;
+      text-align: right;
+    }
+
+    @include breakpoint(wide-hero) {
+      @include headerDetailsOnTheSide
+    }
+
+    @include breakpoint(really-wide) {
+      @include headerDetailsOnTheSide
+    }
   }
 
   section#employment ol.employment-history header h3 {
     text-align: right;
     margin-bottom: 0.4em;
+
+    @include breakpoint(hero-gets-too-narrow) {
+      text-align: left;
+    }
+
+    @include breakpoint(so-narrow-that-header-wraps) {
+      text-align: center;
+    }
+
   }
 
   header h3 .title,
@@ -95,11 +125,23 @@
 
   #employment ol.employment-history .skills,
   #education .summary {
-    float: right;
-    width: 70%;
+
+    @mixin detailInline {
+      float: right;
+      width: 70%;
+    }
+
+    @include breakpoint(wide-hero) {
+      @include detailInline
+    }
+
+    @include breakpoint(really-wide) {
+      @include detailInline
+    }
+
   }
 
-  section#employment ol.employment-history section.skills h4 {
+  #employment ol.employment-history section.skills h4 {
     font-weight: normal;
     margin-bottom: 0.1em;
     font-size: 1.4em;
@@ -125,6 +167,11 @@
     margin-left: 1.4em;
     border-left: solid 2px #CCC;
     padding-left: 0.5em;
+
+    @include breakpoint(so-narrow-that-header-wraps) {
+      border-left: none;
+      font-style: italic;
+    }
   }
 
   #employment,
