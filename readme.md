@@ -27,7 +27,7 @@ Next, from the route of the directory where you cloned this repository, issue th
 npm install
 ```
 
-Finally, issue either:
+Finally, issue the command:
 
 ```
 grunt build
@@ -40,3 +40,20 @@ You can also see the juicy details if you build with a debug flag:
 ```
 grunt build:debug
 ```
+
+Troubleshooting
+--------------------------------
+
+If you're on Windows and you receive the following message when trying to build:
+
+```
+Warning: Command failed:   Liquid Exception: incompatible character encodings: UTF-8 and CP850 in resume.html
+```
+
+...you'll may need to issue the following command prior to building
+
+```
+chcp 65001
+```
+
+By default, Windows 7 uses *Multilingual (Latin I)* as it's Code Page. This will trip up Jekyll as it tries to compile the resume page with contains fancy characters. The preceeding command will make the command prompt use a code page compatible with UTF-8 (which contains the fancy characters).
