@@ -1,5 +1,13 @@
+html.lte8 header.site-header {
+  background-color: $heroBackgroundColorWhenLtIe9;
+}
+
+html.ie9 header.site-header {
+  background-image: url(../assets/backgrounds/out-to-sea.jpg);
+}
+
 header.site-header {
-  
+
   @include breakpoint(wide-hero) {
     @include hdAwareBackgroundImage("../assets/backgrounds/out-to-sea", "JPG");
     background-repeat: no-repeat;
@@ -28,7 +36,6 @@ header.site-header {
   background-position: top;
   margin-bottom: 2em;
   padding: 3em 0 3em 0;
-  background-color: #EDEDED;
   background-size: 100%;
 
   @include breakpoint(so-narrow-that-header-wraps) {
@@ -54,10 +61,12 @@ header.site-header {
   @include breakpoint(hero-gets-too-narrow) {
     p {
       @include transition(all 0.5s);
-      @include adjust-font-size-to(16px);
+      @include adjust-font-size-to(20px);
+      @include adjust-leading-to(1.15);      
       a {
         display: block;
         text-align: center;
+        @include adjust-font-size-to(22px);        
       }
     }
   }
@@ -66,6 +75,9 @@ header.site-header {
     p {
       @include text-shadow(none);
       color: $primaryColor;
+      @include adjust-font-size-to(16px);
+      @include rhythm(0,0,0,1,16px);      
+      text-align: center;
       a {
         @include text-shadow(none);        
       }
@@ -73,19 +85,18 @@ header.site-header {
   }
 
   h1 {
-    font-family: arial;
     text-transform: uppercase;
     font-weight: 100;
     @include adjust-font-size-to(50px);    
     @include rhythm(1,1,0,2,50px);
     text-align: center;
     clear: both;
-    background: none;
+    background: none;    
     a {
       color: $siteTitleTextColor;
       @include text-shadow($siteTitleShadowColor 2px 3px 0);
       text-decoration: none;
-      font-family: 'roboto condensed';
+      font-family: $siteTitleFontFamily;
     }
   }  
 

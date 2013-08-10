@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
+		clean: ["./src/css", "./build"],
 		compass: {
 			debug: {
 				options: {
@@ -14,11 +15,11 @@ module.exports = function(grunt) {
 		jekyll: {
 			debug: {
 				src: 'src',
-				dest: 'C:\\inetpub\\wwwroot'
+				dest: './build'
 			},
 			prod: {
 				src: './src',
-				dest: 'C:\\inetpub\\wwwroot'
+				dest: './build'
 			}
 		},
 		watch: {
@@ -28,16 +29,17 @@ module.exports = function(grunt) {
 			},
 			html: {
 				files: ['src/*','src/_posts/*','src/_layouts/*'],
-				tasks: ['jekyll:debug']				
+				tasks: ['jekyll:debug']
 			}
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.registerTask('default', ['watch']);
 	grunt.registerTask('build', ['build:prod']);
-	grunt.registerTask('build:debug', ['compass:debug', 'jekyll:debug']);
-	grunt.registerTask('build:prod', ['compass:prod', 'jekyll:prod']);
+	grunt.registerTask('build:debug', ['clean', 'compass:debug', 'jekyll:debug']);
+	grunt.registerTask('build:prod', ['clean', 'compass:prod', 'jekyll:prod']);
 };

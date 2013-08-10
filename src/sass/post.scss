@@ -3,19 +3,7 @@
 @import "shared/_mixins";
 
 .post {
-	header {
-		h2 {
-			@include adjust-font-size-to(30px);
-			@include breakpoint(so-narrow-that-header-wraps) {
-				@include adjust-font-size-to(22px);
-				@include adjust-leading-to(1.25);				
-			}
-		}
-		h3 {
-			@include adjust-font-size-to(18px);
-			@include rhythm(0, 0, 0, 0.5, 25px);
-		}
-	}
+
 	span.meta { 
 		display: block;
 		text-align: center;

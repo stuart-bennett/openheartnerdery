@@ -9,9 +9,9 @@ $narrowReadingWidth			 : 600px;		// Narrow down characters per line on a more "r
 // Type
 $base-font-size 	: 18px;
 $base-line-height	: 24px;
+$siteTitleFontFamily: 'roboto condensed', sans-serif;
 $primaryFontFamily  : 'Karla', sans-serif;
 $secondaryFontFamily: 'Sanchez', serif;
-$headingFontFamily  : 'Cantarell', sans-serif;
 $monoSpaceFontFamily: monospace;
 $primaryColor 		: #000;
 $primaryColorLighter: #999;
@@ -20,6 +20,7 @@ $primaryLinkColor   : #2B90D7;
 // Code
 $codeBackgroundColor: #333;
 $codeTextColor: #FFF;
+$heroBackgroundColorWhenLtIe9: lighten(#2B90D7, 25%);
 
 // Site Title Header
 $siteTitleTextColor  : #FFF;

@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html> <![endif]-->
+<!--[if !IE]><!--> <html>             <!--<![endif]-->
 <head>
   <title>{{ page.title }}</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />  
-  <script type="text/javascript" src="scripts/modernizr.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Glegoo|Arvo:400,700,400italic,700italic|Antic+Slab|Kreon:300,400,700|Crete+Round:400,400italic|Copse|Sanchez:400italic,400|Trocchi|Bree+Serif|Enriqueta:400,700|Andada' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/base.css" type="text/css" />
- <link rel="stylesheet" href="/css/post.css" type="text/css" />
-<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&subset=latin,greek-ext,greek,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
-
-<link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic|Donegal+One|Noticia+Text:400,700,700italic,400italic|Merriweather:400,300italic,300,700,900italic,700italic,900,400italic|Cantarell:400,400italic,700,700italic|Habibi|Quando|Open+Sans:400,300,300italic,400italic,600,600italic,800italic,800,700italic,700|Poly:400,400italic|Shanti|Headland+One&subset=latin,latin-ext,vietnamese,cyrillic-ext,greek-ext,greek,cyrillic' rel='stylesheet' type='text/css'>
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <script type="text/javascript" src="scripts/lib/modernizr.js"></script>  
+  <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic|Roboto+Condensed:100,300,700|Sanchez' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/base.css" type="text/css" /> <link rel="stylesheet" href="/css/post.css" type="text/css" />
 </head>
 <body id="post">
 
@@ -20,8 +19,9 @@
 <div class="wrapper">
   <nav>
     <ul>
-      <li {% if page.path == 'index.html' %} class="active"{% endif %}><a href="/">Home</a></li>
-      <li {% if page.path == 'resume.html' %} class="active"{% endif %}><a href="/resume.html">Résumé</a></li>
+      <li><a href="/">Home</a></li>
+      <li class="active"><a href="/writing.html">Writing</a></li>
+      <li><a href="/resume.html">Résumé</a></li>
     </ul>
   </nav>
 </div>
@@ -37,8 +37,8 @@
 
 <article class="post wrapper page-content">
 	<header class="page-header">
-		<h2>{{ page.title }}</h2>
-		<h3>{{ page.subtitle}}</h3>
+		<h1>{{ page.title }}</h1>
+		<h2>{{ page.subtitle}}</h2>
     <span class="meta">{{ page.date | date_to_string }}</span>
 	</header>
 

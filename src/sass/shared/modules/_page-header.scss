@@ -1,17 +1,22 @@
 .page-header {
-	h2 {
+	h1 {
 		color: $primaryColor;
 		text-transform: uppercase;
 		text-align: center;
-		font-size: pixels-to-ems(32);
 		margin-bottom: 0.5em;
 		padding: 0.4em 0;
 		border-bottom: solid #CCC 1px;
+		@include adjust-font-size-to(30px);
+		@include breakpoint(so-narrow-that-header-wraps) {
+			@include adjust-font-size-to(22px);
+			@include adjust-leading-to(1.25);				
+		}		
 	}
 
-	h3 {
+	h2 {
 		color: $primaryColorLighter;	
 		text-align: center;
-		font-size: pixels-to-ems(25);
+		@include adjust-font-size-to(18px);
+		@include rhythm(0, 0, 0, 0.5, 25px);
 	}
 }

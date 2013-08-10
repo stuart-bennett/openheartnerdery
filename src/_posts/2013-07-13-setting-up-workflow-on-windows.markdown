@@ -6,7 +6,7 @@ date:   2013-07-10 20:26:41
 categories: jekyll compass grunt build automation
 ---
 
-Whilst I run and use Fedora, I spend a lot of time in Windows (by day I'm a .NET developer). If I have a spark of inspiration or a quick kick of motivation to fix / amend my site whilst playing Civ V, I want to be ready and able to jump straight on it. I run Windows 7, 64 Bit and I found installing and configuring the same workflow used on Linux generally a painless process.
+This site was originally developed within a Linux environment. When I'm gaming or developing with .NET I typically have to be inside of Windows. Since I spend a time with both Linux and Windows I decided that I'd make more progress with the site if I had a build process that worked across both Linux and Windows. There's nothing really platform specific here but since there are already a ton of tutorials on setting these tools up outside of Windows, I thought I'd do it from the perspective of a Windows 7 environment.
 
 For total clarity I'm running Ruby 1.9.3, I plan to upgrade to version 2 soon but this post covers 1.9.3 so any inconsistences may be down to this.
 
@@ -166,8 +166,10 @@ Instead of asking Node to install each one these modules individually, we can le
   "version": "1.0.0",
   "devDependencies": {
     "grunt": "0.4.1",
-	"grunt-contrib-compass": "0.3.0",
-	"grunt-jekyll": "0.3.8"
+    "grunt-jekyll": "0.3.8",
+    "grunt-contrib-clean": "0.5.0",
+    "grunt-contrib-compass": "0.3.0",
+    "grunt-contrib-watch": "0.5.0"
   }
 }
 {% endhighlight %}
@@ -235,67 +237,13 @@ You would have to issue the command:
 grunt sayHello
 {% endhighlight %}
 
-First of all, I'm going to automate the compilation of my compass code using the targets provided by the _grunt-contrib-compass_ module. First thing to do is have the Gruntfile register the targets provided by this module. Adding the following line to the Gruntfile achieves this registration:
+First of all, I'm going to automate the compilation of my compass code using the targets provided by the _grunt-contrib-compass_ module. I'm going to split the compass compilation task into a "debug" and "production" mode, where specifying "Production" will minify my compiled CSS. First thing to do is have the Gruntfile register the targets provided by this module. Adding the following line to the Gruntfile achieves this registration:
 
 {% highlight javascript %}
 grunt.loadNpmTasks('grunt-contrib-compass');
 {% endhighlight %}
 	
-This needs to be done for every module that you are registering for Grunt targets. Now, to invoke the the compass target, we'll make it a dependency of the default target. THe entire Gruntfile should now look like this:
-
-{% highlight javascript %}
-module.exports = function(grunt) {
-  grunt.initConfig({
-    compass: {
-	  dist: {
-	  }
-	},
-  });	
-
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.registerTask('default', ['compass']);
-};
-{% endhighlight %}
-
-Notice the change of parameters in the _registerTask_ method call. We're registering a target called "default" that should in turn call the target "compass" which we have defined in the initConfig section. Now, when _grunt_ is invoked, the default target invokes the _compass_ target too. The code provided by the _grunt-contrib-compass_ module effectively translates this to a call equivalent to:
-
-{% highlight javascript %}
-compass compile 
-{% endhighlight %}
-
-For me, I've configured compass using _config.rb_ so the command knows where to look for my SASS files and where to output css. If you don't know how to do this, refer to the various config flags available in the <a href="http://compass-style.org/help/tutorials/configuration-reference/" class="external-resource">compass documentation</a>.
-
-Finally, let's add the task to build our Jekyll site. Remember, three things to do when using 3rd party targets:
-
-- 1. Register the tasks found in the the the Node module using _registerTask_
-- 2. Create and provide any options in the _initConfig_ section
-- 3. Make the target a dependency of your main build task
-
-The Gruntfile now looks like:
-
-{% highlight javascript %}
-module.exports = function(grunt) {
-  grunt.initConfig({
-    compass: {
-      dist: {
-      }
-    },
-    jekyll: {
-      dist: {
-        src: 'src',
-        dest: 'C:\\webapps\\mysite'
-      }		
-    }
-  });
-
-  grunt.loadNpmTasks('grunt-jekyll');
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.registerTask('default', ['compass', 'jekyll']);
-};
-{% endhighlight %}
-
-	
-That's it! Running _grunt_ will compile compass code and build a deployable version of a Jekyll site. I extended my Gruntfile to cater for a debug and production version and, in it's current form, looks like:
+This needs to be done for every module that you are registering for Grunt targets. Now, to invoke the the compass target, we'll make it a dependency of the default target. The entire Gruntfile should now look like this:
 
 {% highlight javascript %}
 module.exports = function(grunt) {
@@ -311,35 +259,110 @@ module.exports = function(grunt) {
         }
       }
     },
+  });
+
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.registerTask('build', ['build:prod']);
+  grunt.registerTask('build:debug', ['compass:debug']);
+  grunt.registerTask('build:prod', ['compass:prod']);
+};
+{% endhighlight %}
+
+Notice the change of parameters in the _registerTask_ method call. We're registering 3 new targets, all with the purpose of building the project. The last two tasks "build:debug" and "build:prod" enable us to specify whether we want to run our minification command.
+
+We're registering targets called "build" that should in turn call the target "compass" with either a "debug" or "prod" flag, which we have defined in the initConfig section. Now, when _grunt_ is invoked, the default target invokes the _compass_ target too. The code provided by the _grunt-contrib-compass_ module effectively translates this to a call equivalent to:
+
+{% highlight javascript %}
+compass compile
+{% endhighlight %}
+
+For me, I've configured compass using _config.rb_ so the command knows where to look for my SASS files and where to output css. If you don't know how to do this, refer to the various config flags available in the <a href="http://compass-style.org/help/tutorials/configuration-reference/" class="external-resource">compass documentation</a>.
+
+Next, let's add the task to build our Jekyll site. Remember, three things to do when using 3rd party targets:
+
+- 1. Register the tasks found in the the the Node module using _registerTask_
+- 2. Create and provide any options in the _initConfig_ section
+- 3. Make the target a dependency of your main build task
+
+The Gruntfile now looks like:
+
+{% highlight javascript %}
+module.exports = function(grunt) {
+  grunt.initConfig({
+    compass: {
+      dist: {
+      }
+    },
     jekyll: {
       debug: {
-        src: 'src',
-        dest: 'C:\\webapps\\mysite'
+        src: './src',
+        dest: './build'
       },
       prod: {
         src: './src',
-        dest: 'C:\\webapps\\mysite'
+        dest: './build'
+      }
+    },
+  });
+
+  grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.registerTask('build', ['build:prod']);
+  grunt.registerTask('build:debug', ['compass:debug', 'jekyll:debug']);
+  grunt.registerTask('build:prod', ['compass:prod', 'jekyll:prod']);
+};
+{% endhighlight %}
+
+Finally, add a task from the grunt-contrib-clean module to empty out your build directory before building a new version to ensure we get a fresh build. You can see this in the finished article below.
+	
+That's it! Running _grunt_ will compile compass code and build a deployable version of a Jekyll site. It should look something like:
+
+{% highlight javascript %}
+module.exports = function(grunt) {
+  grunt.initConfig({
+    clean: ["./src/css", "./build"],
+    compass: {
+      debug: {
+        options: {
+        }
+      },
+      prod: {
+        options: {
+          outputStyle: 'compressed'
+        }
+      }
+    },
+    jekyll: {
+      debug: {
+        src: 'src',
+        dest: './build'
+      },
+      prod: {
+        src: './src',
+        dest: './build'
       }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-jekyll');
-  grunt.registerTask('default', ['compass:debug', 'jekyll:debug']);
-  grunt.registerTask('prod', ['compass:prod', 'jekyll:prod'])
+  grunt.registerTask('build', ['build:prod']);
+  grunt.registerTask('build:debug', ['clean', 'compass:debug', 'jekyll:debug']);
+  grunt.registerTask('build:prod', ['clean', 'compass:prod', 'jekyll:prod']);
 };
 {% endhighlight %}
 
 Now I can run:
 
 {% highlight javascript %}
-grunt
+grunt build:debug
 {% endhighlight %}
 
 for non-minified, source commented version of the compass SASS -> CSS compilation, or:
 
 {% highlight javascript %}
-grunt prod
+grunt build:prod
 {% endhighlight %}
 
 to get bandwidth-friendly minified, commentless CSS.
