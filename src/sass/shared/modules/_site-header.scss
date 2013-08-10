@@ -31,6 +31,11 @@ header.site-header {
   background-color: #EDEDED;
   background-size: 100%;
 
+  @include breakpoint(so-narrow-that-header-wraps) {
+    margin-bottom: 0;
+    padding: 3em 0 0.5em 0;
+  }
+
   p {
     font-family: $secondaryFontFamily;
     float: left;

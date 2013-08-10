@@ -111,12 +111,20 @@
 
   section#employment ol.employment-history header .duration {
     margin-bottom: 0.6em;
+
+    @include breakpoint(so-narrow-that-header-wraps) {
+      text-align: center;
+    }
   }
 
   section#employment ol.employment-history header .overview {
     @include adjust-font-size-to(14px);
     @include rhythm(1,0,0,1,14px);
     width: 100%;
+
+    @include breakpoint(so-narrow-that-header-wraps) {
+      text-align: center;
+    }
   }
 
   section#employment ol.employment-history header .overview p {
@@ -163,14 +171,12 @@
   }
 
   section#employment ol.employment-history section.skills ul li ul {
-    margin-top: 0.5em;
-    margin-left: 1.4em;
-    border-left: solid 2px #CCC;
-    padding-left: 0.5em;
 
+    @include apply-side-rhythm-border(left);
+    border-left-color: $rhythm-border-color;
+    margin: 1em 1em;
+    font-style: italic; 
     @include breakpoint(so-narrow-that-header-wraps) {
-      border-left: none;
-      font-style: italic;
     }
   }
 

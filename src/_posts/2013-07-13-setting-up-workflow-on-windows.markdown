@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Establishing a modern web development workflow on Windows
+title:  Establishing a modern web development workflow that works across platforms
 subtitle:  Setting up Grunt, Compass & Jekyll on Windows 7 (64 bit)
 date:   2013-07-10 20:26:41
 categories: jekyll compass grunt build automation
@@ -162,13 +162,13 @@ Instead of asking Node to install each one these modules individually, we can le
  
 {% highlight json %}
 {
-	"name": "ohn",
-	"version": "1.0.0",
-	"devDependencies": {
-		"grunt": "0.4.1",
-		"grunt-contrib-compass": "0.3.0",
-		"grunt-jekyll": "0.3.8"
-	}
+  "name": "ohn",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "0.4.1",
+	"grunt-contrib-compass": "0.3.0",
+	"grunt-jekyll": "0.3.8"
+  }
 }
 {% endhighlight %}
 	
@@ -192,12 +192,12 @@ Grunt expects us to define our build tasks in JavaScript. Here's a stripped down
 
 {% highlight javascript %}
 module.exports = function(grunt) {
-	grunt.initConfig({	
-	});
+  grunt.initConfig({	
+  });
 	
-	grunt.registerTask('default', 'Does nothing useful', function() {
-		console.log('Hi, from the "default" target');
-	});
+  grunt.registerTask('default', 'Does nothing useful', function() {
+    console.log('Hi, from the "default" target');
+  });
 };
 {% endhighlight %}
 
@@ -214,16 +214,18 @@ Running "default" task
 Hi, from the "default" target
 {% endhighlight %}
 
-Grunt expects there to be a "default" task if you invoke a build like this. If you wanted to call it something other than "default", you have to invoke the _grunt_ command with an extra parameter, specifying the target to execute. Say, for example, you want to target to be called "sayHello". Change your Gruntfile like:
+Grunt expects there to be a "default" task if you invoke a build like this. If you wanted to call it something other than "default", you have to invoke the _grunt_ command with an extra parameter, specifying the target to execute. Say, for example, you want to target to be called "sayHello". 
+
+Change your Gruntfile like:
 
 {% highlight javascript %}
 module.exports = function(grunt) {
-	grunt.initConfig({	
-	});
+  grunt.initConfig({	
+  });
 	
-	grunt.registerTask('sayHello', 'Does nothing useful', function() {
-		console.log('I\'m saying hello');
-	});
+  grunt.registerTask('sayHello', 'Does nothing useful', function() {
+    console.log('I\'m saying hello');
+  });
 };
 {% endhighlight %}
 
@@ -243,15 +245,15 @@ This needs to be done for every module that you are registering for Grunt target
 
 {% highlight javascript %}
 module.exports = function(grunt) {
-	grunt.initConfig({
-		compass: {
-			dist: {
-			}
-		},
-	});
-	
-	grunt.loadNpmTasks('grunt-contrib-compass');
-	grunt.registerTask('default', ['compass']);
+  grunt.initConfig({
+    compass: {
+	  dist: {
+	  }
+	},
+  });	
+
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.registerTask('default', ['compass']);
 };
 {% endhighlight %}
 
@@ -268,27 +270,27 @@ Finally, let's add the task to build our Jekyll site. Remember, three things to 
 - 1. Register the tasks found in the the the Node module using _registerTask_
 - 2. Create and provide any options in the _initConfig_ section
 - 3. Make the target a dependency of your main build task
-	
+
 The Gruntfile now looks like:
 
 {% highlight javascript %}
 module.exports = function(grunt) {
-	grunt.initConfig({
-		compass: {
-			dist: {
-			}
-		},
-		jekyll: {
-			dist: {
-				src: 'src',
-				dest: 'C:\\webapps\\mysite'
-			}		
-		}		
-	});
+  grunt.initConfig({
+    compass: {
+      dist: {
+      }
+    },
+    jekyll: {
+      dist: {
+        src: 'src',
+        dest: 'C:\\webapps\\mysite'
+      }		
+    }
+  });
 
-	grunt.loadNpmTasks('grunt-jekyll');
-	grunt.loadNpmTasks('grunt-contrib-compass');
-	grunt.registerTask('default', ['compass', 'jekyll']);
+  grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.registerTask('default', ['compass', 'jekyll']);
 };
 {% endhighlight %}
 
@@ -297,34 +299,34 @@ That's it! Running _grunt_ will compile compass code and build a deployable vers
 
 {% highlight javascript %}
 module.exports = function(grunt) {
-	grunt.initConfig({
-		compass: {
-			debug: {
-				options: {
-				}
-			},
-			prod: {
-				options: {
-					outputStyle: 'compressed'
-				}
-			}
-		},
-		jekyll: {
-			debug: {
-				src: 'src',
-				dest: 'C:\\webapps\\mysite'
-			},
-			prod: {
-				src: './src',
-				dest: 'C:\\webapps\\mysite'
-			}
-		}
-	});
+  grunt.initConfig({
+    compass: {
+      debug: {
+        options: {
+        }
+      },
+      prod: {
+        options: {
+          outputStyle: 'compressed'
+        }
+      }
+    },
+    jekyll: {
+      debug: {
+        src: 'src',
+        dest: 'C:\\webapps\\mysite'
+      },
+      prod: {
+        src: './src',
+        dest: 'C:\\webapps\\mysite'
+      }
+    }
+  });
 
-	grunt.loadNpmTasks('grunt-contrib-compass');
-	grunt.loadNpmTasks('grunt-jekyll');
-	grunt.registerTask('default', ['compass:debug', 'jekyll:debug']);
-	grunt.registerTask('prod', ['compass:prod', 'jekyll:prod'])
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-jekyll');
+  grunt.registerTask('default', ['compass:debug', 'jekyll:debug']);
+  grunt.registerTask('prod', ['compass:prod', 'jekyll:prod'])
 };
 {% endhighlight %}
 

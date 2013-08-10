@@ -76,7 +76,6 @@ p { @include contentBlock(); }
 
   @include breakpoint(so-narrow-that-header-wraps) {
     width: 94%;
-    text-align: center;
   }
 
   @include breakpoint(hero-gets-too-narrow) {
@@ -91,7 +90,7 @@ p { @include contentBlock(); }
 
 .page-content.post {
   max-width: $narrowWidth;
-  p, .highlight, pre {
+  p, .highlight, pre, ul, ol {
     max-width: $narrowReadingWidth;
     margin-left: auto;
     margin-right: auto;

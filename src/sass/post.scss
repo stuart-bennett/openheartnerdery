@@ -1,8 +1,15 @@
 @import "compass/typography/vertical_rhythm";
+@import "shared/_variables";
+@import "shared/_mixins";
+
 .post {
 	header {
 		h2 {
 			@include adjust-font-size-to(30px);
+			@include breakpoint(so-narrow-that-header-wraps) {
+				@include adjust-font-size-to(22px);
+				@include adjust-leading-to(1.25);				
+			}
 		}
 		h3 {
 			@include adjust-font-size-to(18px);
@@ -18,8 +25,14 @@
 		@include rhythm(1, 0, 0, 1, 16px);
 	}
 
-	ul {
+	ul, ol {
 		margin: 0 0 0 2em;
+		font-style: italic;
+		@include apply-side-rhythm-border(left);
+		border-left-color: $rhythm-border-color;
+		li {
+			margin-bottom: 0.5em;
+		}
 	}
 
 	h4,h5 {
@@ -29,6 +42,13 @@
 	h4 {
 		@include adjust-font-size-to(30px);
 		@include rhythm(0.3, 0, 0, 0.3, 30px);
+
+		@include breakpoint(so-narrow-that-header-wraps) {
+			font-weight: 700;
+			@include adjust-font-size-to(24px);
+			@include adjust-leading-to(1.25);			
+		}
+
 	}
 
 	h5 {
