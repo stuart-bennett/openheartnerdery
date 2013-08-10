@@ -9,14 +9,14 @@ html.ie9 header.site-header {
 header.site-header {
 
   @include breakpoint(wide-hero) {
-    @include hdAwareBackgroundImage("../assets/backgrounds/out-to-sea", "JPG");
+    @include hdAwareBackgroundImage("../assets/backgrounds/out-to-sea", "jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;  
   }
 
   @include breakpoint(hero-gets-too-narrow) {
-    @include hdAwareBackgroundImage("../assets/backgrounds/out-to-sea-smaller", "JPG");
+    @include hdAwareBackgroundImage("../assets/backgrounds/out-to-sea-smaller", "jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;
@@ -27,7 +27,7 @@ header.site-header {
   }
 
   @include breakpoint(so-narrow-that-header-wraps) {
-    @include hdAwareBackgroundImage("../assets/backgrounds/out-to-sea-smaller-still", "JPG");
+    @include hdAwareBackgroundImage("../assets/backgrounds/out-to-sea-smaller-still", "jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;
@@ -63,11 +63,6 @@ header.site-header {
       @include transition(all 0.5s);
       @include adjust-font-size-to(20px);
       @include adjust-leading-to(1.15);      
-      a {
-        display: block;
-        text-align: center;
-        @include adjust-font-size-to(22px);        
-      }
     }
   }
 

@@ -56,4 +56,4 @@ Warning: Command failed:   Liquid Exception: incompatible character encodings: U
 chcp 65001
 ```
 
-By default, Windows 7 uses *Multilingual (Latin I)* as it's Code Page. This will trip up Jekyll as it tries to compile the resume page with contains fancy characters. The preceeding command will make the command prompt use a code page compatible with UTF-8 (which contains the fancy characters).
+By default, Windows 7 uses *Multilingual (Latin I)* as it's Code Page. This will trip up Jekyll as it tries to compile the resume page with contains fancy characters. The preceeding command will make the command prompt use a code page compatible with UTF-8 (which contains the fancy characters). The code page will only remain changed for the life time of the single command prompt session.
