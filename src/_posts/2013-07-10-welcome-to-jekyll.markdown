@@ -1,26 +1,21 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada arcu non dui tincidunt, in rhoncus massa consectetur. Proin nec facilisis elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed scelerisque, dolor eget 
-
+title:  "About The Site"
+summary: How it got done
 date:   2013-07-10 20:26:41
 categories: jekyll update
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+###Credits
+This site uses the following fonts:
+  <a href="http://www.google.com/fonts/specimen/Karla">Karla</a>,
+  <a href="http://www.google.com/fonts/specimen/Roboto+Condensed">Roboto Condensed</a>,
+  <a href="http://www.google.com/fonts/specimen/Sanchez">Sanchez</a>
 
-Jekyll also offers powerful support for code snippets:
+###Technology
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+The content on this site is marked up with HTML5. During development, aesthetics are handled by <a href="http://compass-style.org/" class="external">Compass</a> and are crushed into tiny bits of CSS by <a href="http://gruntjs.com/" class="external">Grunt</a> when I command the source code to be built.
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+When publishing, <a href="http://jekyllrb.com/" class="external">Jekyll</a> makes sure the it all goes smoothly.
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+If you really want to, you can build this site for yourself. Grab the source code from <a href="https://github.com/stuart-bennett/openheartnerdery" class="external">GitHub</a>.
