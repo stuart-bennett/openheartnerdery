@@ -4,6 +4,9 @@
 @import "shared/modules/_blog-posts";
 
 .homepage {
+
+  text-align: center;
+
   header {
     h1 {
       @include adjust-font-size-to(30px);
@@ -13,15 +16,19 @@
   }
 
   section {
-    width: 50%;
-    float: left;
+    text-align: left;
+    width: auto;
+    margin: 0 auto;
     margin-bottom: 2em;
+    background: #FFF;
+    padding: 1em;
   }
 
   @include breakpoint(so-narrow-that-header-wraps) {
     section {
       width: 100%;
+      background: transparent;
+      padding: 0;
     }
   }
-  
 }
