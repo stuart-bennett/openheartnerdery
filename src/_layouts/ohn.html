@@ -1,32 +1,8 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 8]>     <html class="ie ie8 lte9 lte8"> <![endif]-->
-<!--[if IE 9]>     <html class="ie ie9 lte9"> <![endif]-->
-<!--[if gt IE 9]>  <html> <![endif]-->
-<!--[if !IE]><!--> <html>             <!--<![endif]-->
-<head>
-	<title>{{ page.title }}</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" /> 
-  <script type="text/javascript" src="/scripts/lib/modernizr.js"></script>  
-  <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic|Roboto+Condensed:100,300,700|Sanchez' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/base.css?v=1" type="text/css" />
-  <link rel="stylesheet" href="/css/homepage.css?v=1" type="text/css" />	
-</head>
+{% include doctype-and-htmlhead.html %}
+
 <body>
 
-<section class="primary-nav">
-<div class="wrapper">
-	<nav>
-		<ul>
-			<li {% if page.path == 'index.html' %} class="active"{% endif %}><a href="/">Home</a></li>
-            <li {% if page.path == 'writing.html' %} class="active"{% endif %}><a href="/writing.html">Writing</a></li>
-			<li {% if page.path == 'resume.html' %} class="active"{% endif %}><a href="/resume.html">Résumé</a></li>
-		</ul>
-	</nav>
-</div>
-</section>
+{% include primary-navigation.html %}
 
 <header class="site-header">
 
@@ -44,21 +20,8 @@
 	{{content}}
 </div>
 
-<script type="text/javascript">
-
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-19427421-1']);
-	_gaq.push(['_trackPageview']);
-
-	(function() {
-	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-
-</script>	
+{% include google-analytics.html %}
 
 </body>
-
 
 </html>

@@ -1,6 +1,9 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
-		clean: ["./src/css", "./build"],
+		clean: {
+			stuff: ["./src/css", "./build", "/usr/local/var/www/htdocs/"],
+			options: { force: true }
+		},
 		compass: {
 			debug: {
 				options: {
@@ -25,11 +28,25 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: ['src/sass/shared/modules/*.scss','src/sass/shared/*.scss','src/sass/*.scss'],
-				tasks: ['compass:debug', 'jekyll:debug']
+				tasks: ['clean', 'compass:debug', 'jekyll:debug', 'copy:debug']
 			},
 			html: {
 				files: ['src/*','src/_posts/*','src/_layouts/*'],
-				tasks: ['jekyll:debug']
+				tasks: ['jekyll:debug', 'copy:debug']
+			}
+		},
+		copy: {
+			debug: {
+				cwd: './build',
+				src: ['**'],
+				dest: '/usr/local/var/www/htdocs/',
+				expand: true
+			},
+			prod: {
+				cwd: './build',
+				src: ['**'],
+				dest: '/usr/local/var/www/htdocs/',
+				expand: true
 			}
 		}
 	});
@@ -38,8 +55,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-jekyll');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.registerTask('default', ['watch']);
 	grunt.registerTask('build', ['build:prod']);
-	grunt.registerTask('build:debug', ['clean', 'compass:debug', 'jekyll:debug']);
-	grunt.registerTask('build:prod', ['clean', 'compass:prod', 'jekyll:prod']);
+	grunt.registerTask('build:debug', ['clean', 'compass:debug', 'jekyll:debug', 'copy:debug']);
+	grunt.registerTask('build:prod', ['clean', 'compass:prod', 'jekyll:prod', 'copy:prod']);
 };
