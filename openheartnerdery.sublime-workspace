@@ -1,0 +1,190 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"grunt-contr",
+				"grunt-contrib-clean"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Grunt/grunt.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/stu/GitHub/openheartnerdery/src/_layouts/resume.html",
+		"/Users/stu/GitHub/openheartnerdery/src/_posts/2014-04-26-test.markdown",
+		"/Users/stu/GitHub/openheartnerdery/src/_posts/2013-07-13-setting-up-workflow-on-windows.markdown",
+		"/Users/stu/GitHub/openheartnerdery/src/resume.html",
+		"/Users/stu/GitHub/openheartnerdery/build/index.html",
+		"/Users/stu/GitHub/openheartnerdery/openheartnerdery.sublime-project",
+		"/Users/stu/GitHub/NodeEs6Demo/app.js",
+		"/Users/stu/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/demo.client/src/index.html",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/demo.client/src/js/lib/socket.io.js",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/node_modules/socket.io/lib/util.js",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/demo.client/Gruntfile.js",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/node_modules/socket.io/lib/socket.io.js",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/demo.client/stylesheets/screen.css",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/demo.server/app.js",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/demo.client/index.html",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/demo.client/package.json",
+		"/Users/stu/GitHub/openheartnerdery/package.json",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/node_modules/socket.io/package.json",
+		"/Users/stu/GitHub/openheartnerdery/Gruntfile.js",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/demo.client/js/app.js",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/demo.server/index.html",
+		"/Users/stu/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/package.json",
+		"/Users/stu/GitHub/FileSystenWbSocketsDemo/npm-debug.log",
+		"/Users/stu/GitHub/openheartnerdery/readme.md",
+		"/Users/stu/GitHub/openheartnerdery/src/sass/shared/modules/_primary-nav.scss",
+		"/Users/stu/GitHub/openheartnerdery/src/sass/base.scss",
+		"/Users/stu/GitHub/openheartnerdery/src/_includes/doctype-and-htmlhead.html",
+		"/Users/stu/GitHub/openheartnerdery/src/sass/homepage.scss",
+		"/Users/stu/GitHub/openheartnerdery/src/_layouts/default.html",
+		"/Users/stu/GitHub/openheartnerdery/src/_layouts/post.html",
+		"/Users/stu/GitHub/openheartnerdery/src/_layouts/ohn.html",
+		"/Users/stu/Library/Application Support/Sublime Text 2/Packages/Grunt/grunt.sublime-build",
+		"/Users/stu/GitHub/openheartnerdery/src/writing.html",
+		"/Users/stu/GitHub/openheartnerdery/src/index.html",
+		"/Users/stu/GitHub/openheartnerdery/src/_includes/google-analytics.html",
+		"/Users/stu/GitHub/openheartnerdery/src/_includes/primary-navigation.html",
+		"/Users/stu/GitHub/openheartnerdery/src/_layouts/_primary-navigation.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"require",
+			"jek",
+			"spaces"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"index.html",
+				"build/index.html"
+			],
+			[
+				"open",
+				"openheartnerdery.sublime-project"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 237.0,
+	"status_bar_visible": true
+}

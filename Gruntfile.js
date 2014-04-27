@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			css: {
-				files: ['src/sass/shared/modules/*.scss','src/sass/shared/*.scss','src/sass/*.scss'],
+				files: ['src/_posts/*', 'src/sass/**/*.scss'],
 				tasks: ['clean', 'compass:debug', 'jekyll:debug', 'copy:debug']
 			},
 			html: {
