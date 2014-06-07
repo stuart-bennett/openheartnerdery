@@ -1,0 +1,50 @@
+@import "_variables";
+@import "_mixins";
+
+
+body {
+  font-family: $primaryFontFamily;
+  background: $mainBackgroundColor;
+}
+
+a {
+  color: $primaryLinkColor;
+}
+
+a:hover {
+  color: #2BC5D7;
+}
+
+h1 a, h2 a, h3 a {
+  text-decoration: none;
+}
+
+p { @include contentBlock(); }
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1000px;
+  @include breakpoint(so-narrow-that-header-wraps) {
+    width: 94%;
+  }
+
+  @include breakpoint(hero-gets-too-narrow) {
+    width: 93%;
+  }
+}
+
+.page-content {
+  max-width: $wideWidth;  
+  margin-bottom: $spaceBetweenContentAndFooter;
+}
+
+.page-content.post {
+  max-width: $narrowWidth;
+  p, .highlight, pre, ul, ol {
+    max-width: $narrowReadingWidth;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

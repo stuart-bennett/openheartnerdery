@@ -2,9 +2,13 @@
 @import "compass/reset";
 @include establish-baseline;
 
-@import "shared/modules/_site-header";
+@import "shared/_base";
+@import "shared/modules/_code";
 @import "shared/modules/_primary-nav";
+@import "shared/modules/_site-header";
+@import "shared/modules/_page-header";
 
-.page-content {
-    margin: 0 1em;
-}
+@import "pages/homepage";
+@import "pages/post";
+@import "pages/resume";
+@import "pages/resume.print";

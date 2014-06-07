@@ -34,13 +34,16 @@
     @include rhythm(0.3,0,0,0,12px);
   }
 
-  header h2 {
+  .experience-title,
+  .education-title {
+    color: black;
     text-transform: uppercase;
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     padding: 0.4em 0;
     border-bottom: solid #CCC 1px;
+    font-size: 1.66667em;
+    line-height: 1.6em;
   }
 
   ol li {
@@ -54,7 +57,7 @@
   }
 
 
-  section#employment ol.employment-history header,
+  #employment .employment-history header,
   #education ol li .category {
     @mixin headerDetailsOnTheSide {
       float: left;
@@ -71,7 +74,7 @@
     }
   }
 
-  section#employment ol.employment-history header h3 {
+  .employment-history-header {
     text-align: right;
     margin-bottom: 0.4em;
 
@@ -116,7 +119,7 @@
     }
   }
 
-  section#employment ol.employment-history header .overview {
+  #employment ol.employment-history header .overview {
     @include adjust-font-size-to(14px);
     @include rhythm(1,0,0,1,14px);
     width: 100%;
@@ -126,11 +129,11 @@
     }
   }
 
-  section#employment ol.employment-history header .overview p {
+  #employment .employment-history header .overview p {
     color: #666;
   }
 
-  #employment ol.employment-history .skills,
+  #employment .employment-history .skills,
   #education .summary {
 
     @mixin detailInline {
