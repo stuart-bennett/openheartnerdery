@@ -1,16 +1,10 @@
+@import "compass";
 @import "compass/reset";
-@import "compass/css3";
-@import "compass/typography/vertical_rhythm";
-@import "shared/_mixins";
-@import "shared/_variables";
-@import "shared/_base";
-@import "shared/_chrome-font-face-fixes";
-@import "shared/modules/_primary-nav";
+@include establish-baseline;
+
 @import "shared/modules/_site-header";
-@import "shared/modules/_page-header";
-@import "shared/modules/_site-footer";
-@import "shared/modules/_built-using";
-@import "shared/modules/_code";
-@import "pages/homepage";
-@import "pages/resume";
-@import "pages/post";
+@import "shared/modules/_primary-nav";
+
+.page-content {
+    margin: 0 1em;
+}

@@ -1,12 +1,15 @@
-html.lte8 header.site-header {
+@import "../_variables";
+@import "../_mixins";
+
+.lte8 .site-header {
   background-color: $heroBackgroundColorWhenLtIe9;
 }
 
-html.ie9 header.site-header {
+.ie9 .site-header {
   background-image: url(../assets/backgrounds/out-to-sea.jpg);
 }
 
-header.site-header {
+.site-header {
 
   @include breakpoint(wide-hero) {
     @include hdAwareBackgroundImage("../assets/backgrounds/out-to-sea", "jpg");
@@ -22,10 +25,6 @@ header.site-header {
     background-size: 100%;
   }
 
-  @include breakpoint(really-wide) {
-    // Maybe a bigger res image for really wide displays?
-  }
-
   @include breakpoint(so-narrow-that-header-wraps) {
     @include hdAwareBackgroundImage("../assets/backgrounds/out-to-sea-smaller-still", "jpg");
     background-repeat: no-repeat;
@@ -38,12 +37,28 @@ header.site-header {
   padding: 3em 0 3em 0;
   background-size: 100%;
 
+  .site-title {
+    text-transform: uppercase;
+    font-weight: 100;
+    @include adjust-font-size-to(50px);    
+    @include rhythm(1,1,0,2,50px);
+    text-align: center;
+    clear: both;
+    background: none;    
+    a {
+      color: $siteTitleTextColor;
+      @include text-shadow($siteTitleShadowColor 2px 3px 0);
+      text-decoration: none;
+      font-family: $siteTitleFontFamily;
+    }
+  }
+
   @include breakpoint(so-narrow-that-header-wraps) {
     margin-bottom: 0;
     padding: 3em 0 0.5em 0;
   }
 
-  p {
+  .intro-text {
     font-family: $secondaryFontFamily;
     float: left;
     clear: both;
@@ -59,7 +74,7 @@ header.site-header {
 
 
   @include breakpoint(hero-gets-too-narrow) {
-    p {
+    .intro-text {
       @include transition(all 0.5s);
       @include adjust-font-size-to(20px);
       @include adjust-leading-to(1.15);      
@@ -67,7 +82,7 @@ header.site-header {
   }
 
   @include breakpoint(so-narrow-that-header-wraps) {
-    p {
+    .intro-text {
       @include text-shadow(none);
       color: $primaryColor;
       @include adjust-font-size-to(16px);
@@ -78,22 +93,6 @@ header.site-header {
       }
     }
   }
-
-  h1 {
-    text-transform: uppercase;
-    font-weight: 100;
-    @include adjust-font-size-to(50px);    
-    @include rhythm(1,1,0,2,50px);
-    text-align: center;
-    clear: both;
-    background: none;    
-    a {
-      color: $siteTitleTextColor;
-      @include text-shadow($siteTitleShadowColor 2px 3px 0);
-      text-decoration: none;
-      font-family: $siteTitleFontFamily;
-    }
-  }  
 
   &:after { @include clearFix(); }
 }

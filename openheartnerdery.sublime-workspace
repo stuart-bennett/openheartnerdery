@@ -36,6 +36,11 @@
 	},
 	"file_history":
 	[
+		"/Users/stu/GitHub/openheartnerdery/Gruntfile.js",
+		"/Users/stu/GitHub/openheartnerdery/src/_posts/2014-04-27-web-components.markdown",
+		"/Users/stu/GitHub/openheartnerdery/src/_posts/2013-07-10-about-the-site.markdown",
+		"/Users/stu/GitHub/openheartnerdery/src/index.html",
+		"/Users/stu/GitHub/openheartnerdery/src/_includes/doctype-and-htmlhead.html",
 		"/Users/stu/GitHub/openheartnerdery/src/_layouts/resume.html",
 		"/Users/stu/GitHub/openheartnerdery/src/_posts/2014-04-26-test.markdown",
 		"/Users/stu/GitHub/openheartnerdery/src/_posts/2013-07-13-setting-up-workflow-on-windows.markdown",
@@ -55,7 +60,6 @@
 		"/Users/stu/GitHub/FileSystenWbSocketsDemo/demo.client/package.json",
 		"/Users/stu/GitHub/openheartnerdery/package.json",
 		"/Users/stu/GitHub/FileSystenWbSocketsDemo/node_modules/socket.io/package.json",
-		"/Users/stu/GitHub/openheartnerdery/Gruntfile.js",
 		"/Users/stu/GitHub/FileSystenWbSocketsDemo/demo.client/js/app.js",
 		"/Users/stu/GitHub/FileSystenWbSocketsDemo/demo.server/index.html",
 		"/Users/stu/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
@@ -64,14 +68,12 @@
 		"/Users/stu/GitHub/openheartnerdery/readme.md",
 		"/Users/stu/GitHub/openheartnerdery/src/sass/shared/modules/_primary-nav.scss",
 		"/Users/stu/GitHub/openheartnerdery/src/sass/base.scss",
-		"/Users/stu/GitHub/openheartnerdery/src/_includes/doctype-and-htmlhead.html",
 		"/Users/stu/GitHub/openheartnerdery/src/sass/homepage.scss",
 		"/Users/stu/GitHub/openheartnerdery/src/_layouts/default.html",
 		"/Users/stu/GitHub/openheartnerdery/src/_layouts/post.html",
 		"/Users/stu/GitHub/openheartnerdery/src/_layouts/ohn.html",
 		"/Users/stu/Library/Application Support/Sublime Text 2/Packages/Grunt/grunt.sublime-build",
 		"/Users/stu/GitHub/openheartnerdery/src/writing.html",
-		"/Users/stu/GitHub/openheartnerdery/src/index.html",
 		"/Users/stu/GitHub/openheartnerdery/src/_includes/google-analytics.html",
 		"/Users/stu/GitHub/openheartnerdery/src/_includes/primary-navigation.html",
 		"/Users/stu/GitHub/openheartnerdery/src/_layouts/_primary-navigation.html"
@@ -163,6 +165,10 @@
 		"selected_items":
 		[
 			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
 				"index.html",
 				"build/index.html"
 			],
@@ -178,6 +184,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/Users/stu/GitHub/WebComponents/src/js/WebComponents.sublime-project"
+			]
 		],
 		"width": 380.0
 	},
