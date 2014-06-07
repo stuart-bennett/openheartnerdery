@@ -15,12 +15,6 @@ a:hover {
   color: #2BC5D7;
 }
 
-h1 a, h2 a, h3 a {
-  text-decoration: none;
-}
-
-p { @include contentBlock(); }
-
 .wrapper {
   position: relative;
   margin: 0 auto;
@@ -38,13 +32,4 @@ p { @include contentBlock(); }
 .page-content {
   max-width: $wideWidth;  
   margin-bottom: $spaceBetweenContentAndFooter;
-}
-
-.page-content.post {
-  max-width: $narrowWidth;
-  p, .highlight, pre, ul, ol {
-    max-width: $narrowReadingWidth;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
