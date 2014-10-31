@@ -1,17 +1,23 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 		clean: {
-			stuff: ["./src/css", "./build", "/usr/local/var/www/htdocs/"],
+			stuff: [
+				"./build",
+				"/usr/local/var/www/htdocs/"],
 			options: { force: true }
 		},
-		compass: {
+		sass: {
 			debug: {
-				options: {
+				files:  {
+					'./build/css/base.css': './src/sass/base.scss'
 				}
 			},
 			prod: {
 				options: {
-					outputStyle: 'compressed'
+					style: 'compressed'
+				},
+				files: {
+					'./build/css/base.css': './src/sass/base.scss'
 				}
 			}
 		},
@@ -53,7 +59,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.registerTask('default', ['watch']);

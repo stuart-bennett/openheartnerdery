@@ -1,1 +1,8 @@
+@import '../../bower_components/meyer-reset/stylesheets/_meyer-reset.scss';
 
+@include meyer-reset;
+
+body {
+
+  background: green;
+}
