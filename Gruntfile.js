@@ -54,16 +54,38 @@ module.exports = function(grunt) {
 				dest: '/usr/local/var/www/htdocs/',
 				expand: true
 			}
+		},
+		requirejs: {
+			compile: {
+					options: {
+					baseUrl: "./src/javascript",
+					name: 'main',
+					out: './build/javascript/main.js'
+				}
+			}
+		},
+		uglify: {
+			libs: {
+				files: {
+					'./build/javascript/require.js': ['./bower_components/requirejs/require.js']
+				}
+			}
+		},
+		jshint: {
+			all: ['Gruntfile.js', './src/javascript/**/*']
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-requirejs');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.registerTask('default', ['watch']);
 	grunt.registerTask('build', ['build:prod']);
-	grunt.registerTask('build:debug', ['clean', 'jekyll:debug', 'sass:debug', 'copy:debug']);
-	grunt.registerTask('build:prod', ['clean', 'jekyll:prod', 'sass:debug', 'copy:prod']);
+	grunt.registerTask('build:debug', ['clean', 'jshint', 'jekyll:debug', 'sass:debug', 'requirejs', 'uglify:libs', 'copy:debug']);
+	grunt.registerTask('build:prod', ['clean', 'jshint', 'jekyll:prod', 'sass:debug', 'requirejs', 'uglify:libs', 'copy:prod']);
 };
