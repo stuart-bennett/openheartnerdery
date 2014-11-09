@@ -4,6 +4,12 @@ title: Web Development | stu@openheartnerdery
 ---
 
 {% for post in site.posts limit:1 %}
-  <h1>{{post.title}}</h1>
-  {{post.content}}
+  <article class="blogPost">
+    <header class="blogPost-header">
+      <h1 class="blogPost-header-title">{{post.title}}</h1>
+    </header>
+    <div class="blogPost-content">
+      {{post.content}}
+    </div>
+  </article>
 {% endfor %}

@@ -1,0 +1,21 @@
+.blogPost-header {
+  margin-bottom: $spacing-small;
+}
+
+.blogPost-header-title {
+  font-size: $fontSize-larger;
+}
+
+.blogPost-content {
+
+  h2 {
+    font-size: $fontSize-large;
+    line-height: $spacing-base;
+    margin-bottom: $spacing-smaller;
+  }
+
+  p {
+    line-height: $spacing-base;
+    margin-bottom: $spacing-base;
+  }
+}

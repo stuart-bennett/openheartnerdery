@@ -34,11 +34,11 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: ['src/_posts/*', 'src/sass/**/*.scss'],
-				tasks: ['clean', 'compass:debug', 'jekyll:debug', 'copy:debug']
+				tasks: ['build:debug']
 			},
 			html: {
 				files: ['src/*','src/_posts/*','src/_layouts/*'],
-				tasks: ['jekyll:debug', 'copy:debug']
+				tasks: ['build:prod']
 			}
 		},
 		copy: {
@@ -64,6 +64,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.registerTask('default', ['watch']);
 	grunt.registerTask('build', ['build:prod']);
-	grunt.registerTask('build:debug', ['clean', 'jekyll:debug', 'copy:debug']);
-	grunt.registerTask('build:prod', ['clean', 'jekyll:prod', 'copy:prod']);
+	grunt.registerTask('build:debug', ['clean', 'jekyll:debug', 'sass:debug', 'copy:debug']);
+	grunt.registerTask('build:prod', ['clean', 'jekyll:prod', 'sass:debug', 'copy:prod']);
 };

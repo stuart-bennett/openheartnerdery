@@ -1,8 +1,8 @@
 @import '../../bower_components/meyer-reset/stylesheets/_meyer-reset.scss';
+@import '../../libs/sass/bourbon/_bourbon';
+@import 'settings/_type';
 
 @include meyer-reset;
-
-body {
-
-  background: green;
-}
+@import 'partials/_global';
+@import 'partials/_siteHeader';
+@import 'partials/_blogPost';
