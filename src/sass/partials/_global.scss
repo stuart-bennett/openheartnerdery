@@ -1,5 +1,26 @@
+$site-padding-top: em(60);
+
 body {
   font-size: 100%;
   font-family: $fontFamily-primary;
-  margin: $spacing-base;
+}
+
+.information,
+.content {
+	padding-top: $site-padding-top;
+}
+
+.information {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	width:30%;
+}
+
+.content {
+	width:70%;
+	display: inline-block;
+	padding-left: $spacing-base;
+	padding-right: $spacing-base;
+	box-sizing: border-box;
 }

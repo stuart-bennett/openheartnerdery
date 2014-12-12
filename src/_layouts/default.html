@@ -2,19 +2,30 @@
 
 <body>
 
-<header class="siteHeader">
-  <h1 class="siteHeader-title"><a href="/">Open Heart Nerdery</a></h1>
-</header>
+<section class="information">
 
-<nav>
-  <a href="/">Home</a>
-  <a href="/resume.html">Résumé</a>
-</nav>
+	<header class="siteHeader">
+	  <h1 class="siteHeader-title"><a href="/" class="siteHeader-link">Open Heart Nerdery</a></h1>
+	</header>
+
+	<nav class="navigation">
+		<ul>
+	  		<li class="navigation-link"><a href="/">Home</a></li>
+	  		<li class="navigation-link"><a href="/resume.html">Résumé</a></li>
+	  </ul>
+	</nav>
+
+	<section class="introduction">
+	    <p>Programming and Web Development</p>
+	</section>
+
+</section><section class="content">
 
 {{content}}
 
-{% include google-analytics.html %}
+</section>
 
+{% include google-analytics.html %}
 
 {% include requirejs.html %}
 </body>

@@ -1,6 +1,15 @@
 .siteHeader {
   margin-bottom: $spacing-base;
 }
+
 .siteHeader-title {
   font-size: $fontSize-largest;
+}
+
+.siteHeader-link {
+	text-decoration: none;	
+}
+
+.introduction {
+	font-size: $fontSize-small;
 }

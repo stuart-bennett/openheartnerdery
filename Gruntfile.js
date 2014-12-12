@@ -9,15 +9,16 @@ module.exports = function(grunt) {
 		sass: {
 			debug: {
 				files:  {
-					'./build/css/base.css': './src/sass/base.scss'
-				}
+					'./build/css/base.css': './src/sass/base.scss',
+					'./build/css/resume.css': './src/sass/resume.scss'				}
 			},
 			prod: {
 				options: {
 					style: 'compressed'
 				},
 				files: {
-					'./build/css/base.css': './src/sass/base.scss'
+					'./build/css/base.css': './src/sass/base.scss',
+					'./build/css/resume.css': './src/sass/resume.scss'
 				}
 			}
 		},

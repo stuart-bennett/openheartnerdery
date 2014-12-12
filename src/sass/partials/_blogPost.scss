@@ -4,6 +4,11 @@
 
 .blogPost-header-title {
   font-size: $fontSize-larger;
+  line-height: $spacing-base;
+}
+
+.blogPost-header-dateOfPublication {
+  font-size: $fontSize-small;
 }
 
 .blogPost-content {
