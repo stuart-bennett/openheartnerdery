@@ -1,4 +1,6 @@
 $site-padding-top: em(60);
+$site-content-padding: em(60);
+$site-info-padding: em(30);
 
 body {
   font-size: 100%;
@@ -11,16 +13,20 @@ body {
 }
 
 .information {
+	position: relative;
 	display: inline-block;
 	vertical-align: top;
 	text-align: center;
 	width:30%;
+	padding-left: $site-info-padding;
+	padding-right: $site-info-padding;
+	box-sizing: border-box;
 }
 
 .content {
 	width:70%;
 	display: inline-block;
-	padding-left: $spacing-base;
-	padding-right: $spacing-base;
+	padding-left: $site-content-padding;
+	padding-right: $site-content-padding * 2;
 	box-sizing: border-box;
 }

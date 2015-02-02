@@ -20,7 +20,8 @@
   }
 
   p {
-    line-height: $spacing-base;
+    font-weight: $fontWeight-light;
+    line-height: $lineHeight-base;
     margin-bottom: $spacing-base;
   }
 }

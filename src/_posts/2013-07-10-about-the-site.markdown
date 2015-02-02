@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "About The Site"
 subtitle: How it got done
 date:   2013-07-10 20:26:41

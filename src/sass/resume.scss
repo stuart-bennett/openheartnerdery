@@ -3,4 +3,56 @@
 @import '_settings';
 
 @include meyer-reset;
+@import '_partials';
 @import '_resume';
+
+.coreSkills {
+}
+
+.coreSkills-item {
+  vertical-align: top;
+  width: 33%;
+  display: inline-block;
+  margin-bottom: $spacing-base;
+}
+
+.coreSkills-item-name {
+  font-size: $fontSize-large;
+  margin-bottom: $spacing-smaller;
+  font-weight: $fontWeight-medium;
+}
+
+.coreSkills-item-description {
+  font-size: $fontSize-small;
+  line-height: $lineHeight-small;
+  font-weight: $fontWeight-light;
+  font-family: $fontFamily-primary;
+}
+
+
+.block-title {
+  font-size: $fontSize-larger;
+  margin-bottom: $spacing-small;
+}
+
+.block-item-header {
+  font-size: $fontSize-large;
+  margin-bottom: $spacing-smaller;
+}
+
+.block-item-single {
+  display: block;
+  font-size: $fontSize-small;
+  margin-bottom: $spacing-smaller;
+}
+
+.block-item-intro {
+  font-weight: $fontWeight-light;
+  margin-bottom: $spacing-small;
+}
+
+.block-item-list-item {
+  font-weight: $fontWeight-light;
+  margin-bottom: $spacing-small;
+  line-height: $lineHeight-base;
+}

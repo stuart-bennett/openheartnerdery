@@ -1,8 +1,25 @@
 .navigation {
     text-align: center;
-    margin-bottom: $spacing-base;
+    margin-bottom: $spacing-large;
 }
 
-.navigation-link {
-	margin-bottom: $spacing-smaller;
+.navigation-title {
+    font-family: $fontFamily-secondary;
+    font-size: $fontSize-smaller;
+    line-height: $lineHeight-base;
+    margin-bottom: $spacing-base;
+    text-transform: uppercase;
+}
+
+.navigation-item {
+	margin-bottom: $spacing-smaller;	
+}
+
+.navigation-item-link {
+	font-size: $fontSize-small;
+	line-height: $lineHeight-small;
+}
+
+.navigation-item-link {
+	text-decoration: none;	
 }

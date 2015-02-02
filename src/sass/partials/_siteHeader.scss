@@ -1,15 +1,13 @@
 .siteHeader {
-  margin-bottom: $spacing-base;
+	margin-bottom: $spacing-small;
 }
 
 .siteHeader-title {
-  font-size: $fontSize-largest;
+  font-size: $fontSize-small;
+  margin-bottom: $spacing-smaller;
 }
 
 .siteHeader-link {
-	text-decoration: none;	
-}
-
-.introduction {
-	font-size: $fontSize-small;
+	text-decoration: none;
+	color: $color-black;
 }

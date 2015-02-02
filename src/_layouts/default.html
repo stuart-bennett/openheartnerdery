@@ -5,19 +5,31 @@
 <section class="information">
 
 	<header class="siteHeader">
-	  <h1 class="siteHeader-title"><a href="/" class="siteHeader-link">Open Heart Nerdery</a></h1>
+	  <h1 class="siteHeader-title">
+	  	<a href="/" class="siteHeader-link">Open Heart Nerdery</a>
+	  </h1>
+		<section class="introduction">
+		    <p>Programming and Web Development</p>
+		</section>
 	</header>
 
 	<nav class="navigation">
 		<ul>
-	  		<li class="navigation-link"><a href="/">Home</a></li>
-	  		<li class="navigation-link"><a href="/resume.html">Résumé</a></li>
+	  		<li class="navigation-item"><a href="/" class="navigation-item-link">Home</a></li>
+	  		<li class="navigation-item"><a href="/resume.html" class="navigation-item-link">Résumé</a></li>
 	  </ul>
 	</nav>
-
-	<section class="introduction">
-	    <p>Programming and Web Development</p>
-	</section>
+	
+	<nav class="navigation">
+		<h1 class="navigation-title">Recent Posts</h1>
+		<ul>
+		{% for post in site.posts %}
+			<li class="navigation-item">
+				<a href="{{post.url}}" class="navigation-item-link">{{ post.title }}</a>
+			</li>
+		{% endfor %}
+		</ul>
+	</nav>
 
 </section><section class="content">
 

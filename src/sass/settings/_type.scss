@@ -1,13 +1,28 @@
 $fontFamily-primary: 'Source Sans Pro';
+$fontFamily-secondary: 'Volkorn';
 
-$fontSize-small:   em(14);
-$fontSize-normal:  em(17);
-$fontSize-large:   em(21);
-$fontSize-larger:  em(27);
-$fontSize-largest: em(32);
+$fontSize-smaller: rem(10);
+$fontSize-small:   rem(14);
+$fontSize-normal:  rem(17);
+$fontSize-large:   rem(21);
+$fontSize-larger:  rem(27);
+$fontSize-largest: rem(32);
 
-$lineHeight-base:  em(20);
+$lineHeight-small: rem(18);
+$lineHeight-base:  rem(22);
 
 $spacing-smaller: em(7);
 $spacing-small:   em(12);
 $spacing-base:    em(20);
+$spacing-large:   em(28);
+$spacing-large:   em(33);
+
+$contentWidth-narrow: 'narrow';
+$contentWidth-medium: 'medium';
+$contentWidth-wide:   'wide';
+
+$ratio: 1.61803399;
+
+$fontWeight-light:  300;
+$fontWeight-medium: 400;
+$fontWeight-bold:   700;

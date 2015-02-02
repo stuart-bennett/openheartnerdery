@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  Web Components
 subtitle: Structure comes to widget development on the web.
 date:   2014-04-27 20:11:00

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  Establishing a modern web development workflow that works across platforms
 subtitle:  Setting up Grunt, Compass & Jekyll on Windows 7 (64 bit)
 date:   2013-07-10 20:26:41

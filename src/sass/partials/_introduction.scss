@@ -1,5 +1,8 @@
 .introduction {
-    font-size: $fontSize-large;
-    margin-bottom: $spacing-base;
+    font-style: italic;
+    font-family: $fontFamily-secondary;
+    font-size: $fontSize-smaller;
     line-height: $lineHeight-base;
+    margin-bottom: $spacing-base;
+    text-transform: uppercase;
 }
