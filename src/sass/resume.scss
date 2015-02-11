@@ -6,10 +6,18 @@
 @import '_partials';
 @import '_resume';
 
+.resume-header {
+  font-family: $fontFamily-alternative;
+  margin-bottom: $spacing-base;
+  font-size: $fontSize-larger;
+  text-transform: uppercase;
+}
+
 .coreSkills {
 }
 
 .coreSkills-item {
+  padding: $spacing-small;
   vertical-align: top;
   width: 33%;
   display: inline-block;
@@ -17,9 +25,17 @@
 }
 
 .coreSkills-item-name {
+  font-family: $fontFamily-alternative;
   font-size: $fontSize-large;
   margin-bottom: $spacing-smaller;
   font-weight: $fontWeight-medium;
+  line-height: rem(26);
+
+  @include media($breakpoint-wide) {
+    font-size: $fontSize-normal;
+    line-height: rem(24);
+    text-align: center;
+  }
 }
 
 .coreSkills-item-description {

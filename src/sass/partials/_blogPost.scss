@@ -1,5 +1,16 @@
+@import "../../../libs/sass/neat/_neat";
+.blogPost {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .blogPost-header {
   margin-bottom: $spacing-small;
+  text-align: center;
+
+  @include media($breakpoint-wide) {
+    text-align: left;
+  }
 }
 
 .blogPost-header-title {
