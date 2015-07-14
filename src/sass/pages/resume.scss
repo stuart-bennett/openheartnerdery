@@ -9,7 +9,6 @@
         width: 33.3%;
         vertical-align: top;
         margin-bottom: $spacing-base;
-
         padding-left: $spacing-large;
         padding-right: $spacing-large;
         box-sizing: border-box;
@@ -19,7 +18,12 @@
     }
 
     .coreSkills-title {
-        font-size: 1.2rem;
+        font-size: $fontSize-large;
+    }
+
+    .coreSkills-detail {
+        font-size: $fontSize-small;
+        line-height: $lineSpacing-small;
     }
 
   .experience-title,
