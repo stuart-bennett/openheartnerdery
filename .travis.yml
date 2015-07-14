@@ -12,6 +12,7 @@ install: npm install
 before_script: grunt build
 deploy:
   provider: divshot
+  environment:
+      master: production
   api_key:
     secure: uOLt/2ibp94eODlNCNWsft2Nwt13Zzv+uFaidxCKhnuSjFI/Df0EE3dIBzs/YKHEP3pdyrP7hkwPdOssilo7gc6vH7fJGcBoo+57m2ugIrrkc/FbbmIVnEHAoV2gXbkIazBbTq5XvEbB1lh9j58erWsOAr3OJU6pWepO6mogPcizFNZjEa1rtfvShspil0K14Q5YO1QDyqctHEQ7sYD60p5Y926bVynm31XVoi+a68cxnDg43v4+h3J2g6k1MjDm2o54//cTfLHtNSugkR1VsyGVz0dQyoA1c1G/tJL441smdcn4AK77CPjvxoSie+DQtxIVca2zMi3pz4TYE4M3i07T+DA17NpX0xvmycNVm51xI7taY2apL2zdmi3FVcOUDStB4uZjc8/OR0RovHZlCaPIFnW4g1QHZbMZY5Vjf21WSkX1gWnoPVnccSenq+0r4i26fRONukUnukM1l3UEjJoKyL+5q389o6KNyvWiRzbUPsDI3ZDarBILtw91sWHMCRSmiPSd+uC72Tnhc2IJ8LyMfmjZeCnxnRSTA6dQZykmoskV8phseF27N1cjl8ZDSlP+LCGrV61k72zwUX42LBwOwQn/z3pQ3VOD/e25WWLEDF+NkYt1Pk+ymB+tVx6Q2U5JLn5S3GaxFtqW8cIQ8WZjvC1n9uuuizbleXoLG+o=
-    environment: production
