@@ -4,35 +4,23 @@
 
 .resume {
 
-  .core-skills {
-    float: left;
-    padding: 0 3em;
-    @include breakpoint(so-narrow-that-header-wraps) {
-      padding: 0;
-    }    
-  }
+    .coreSkills li {
+        display: inline-block;
+        width: 33.3%;
+        vertical-align: top;
+        margin-bottom: $spacing-base;
 
-  .core-skills li {
-    float: left;
-    width: 30%;
-    margin-right: 1.25em;
-    margin-bottom: 4em;
-    height: 70px;
+        padding-left: $spacing-large;
+        padding-right: $spacing-large;
+        box-sizing: border-box;
 
-    @include breakpoint(resume-core-skills-wrap) {
-      float: none;
-      height: auto;
-      width: 100%;
-      margin-bottom: 0.5em;
+        &:nth-child(3n + 1) { padding-left: 0; }
+        &:nth-child(3n + 3) { padding-right: 0; }
     }
-  }
 
-  .core-skills li .additional {
-    display: block;
-    color: #666;
-    @include adjust-font-size-to(14px, 0.75);
-    @include rhythm(0.3,0,0,0,12px);
-  }
+    .coreSkills-title {
+        font-size: 1.2rem;
+    }
 
   .experience-title,
   .education-title {
@@ -177,7 +165,7 @@
     @include apply-side-rhythm-border(left);
     border-left-color: $rhythm-border-color;
     margin: 1em 1em;
-    font-style: italic; 
+    font-style: italic;
     @include breakpoint(so-narrow-that-header-wraps) {
     }
   }
