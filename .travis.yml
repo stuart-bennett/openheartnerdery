@@ -3,6 +3,8 @@ node_js:
     - "0.8"
 python:
     - "2.7.6"
+ruby:
+    - "2.0.0"
 before_install: npm install -g grunt-cli
 install: npm install
 before_script: grunt build
