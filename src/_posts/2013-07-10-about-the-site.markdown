@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "About The Site"
-subtitle: How it got done
+subtitle: Colophon.
 date:   2013-07-10 20:26:41
 categories: jekyll update
 ---
