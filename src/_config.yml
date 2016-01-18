@@ -1,4 +1,4 @@
 name: Open Heart Nerdery
-pygments: true
+highlighter: true
 permalink: writing/:title
 exclude: [sass]
